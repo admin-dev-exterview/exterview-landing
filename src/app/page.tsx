@@ -729,7 +729,7 @@ export default function Home() {
                 <br /> candidate screening
               </h2>
               <div className="text-4xl font-bold mb-2 text-[#0e6cf6] w-full bg-white rounded-full py-2 text-start px-5">
-                - {Math.abs(savedHours.toFixed(0))} hours
+                - {Math.abs(Math.floor(savedHours))} hours
               </div>
               <h2 className="text-2xl mb-4 text-start">
                 Compared to current <br /> process over a year
@@ -746,8 +746,9 @@ export default function Home() {
                 <div>
                   You’ll spend ~5 minutes per position to create, ~5 minutes to
                   customize the AI, and ~{aiScreeningTime} hours per position to
-                  review the results. Spending {Math.abs(savedHours.toFixed(0))}{" "}
-                  hours in total on screening.
+                  review the results. Spending{" "}
+                  {Math.abs(Math.floor(savedHours))} hours in total on
+                  screening.
                 </div>
               </div>
             </div>
