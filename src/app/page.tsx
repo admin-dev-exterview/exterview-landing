@@ -192,7 +192,7 @@ export default function Home() {
   return (
     <div className="relative bg-[#f3f8fe] text-zinc-950">
       {/* header */}
-      <header className="flex justify-between items-center py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
+      <header className="flex justify-between items-center py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 px-5">
         <nav
           data-layername="menu"
           className="flex overflow-hidden flex-wrap gap-5 justify-between px-7 py-2 w-full rounded-2xl border border-solid bg-white bg-opacity-80 border-neutral-900 border-opacity-10 max-md:px-5 max-md:max-w-full"
@@ -229,8 +229,8 @@ export default function Home() {
         </nav>
       </header>
       {/* hero */}
-      <section ref={menuItems[0].ref} className="h-screen w-full">
-        <div className="flex w-full gap-10 justify-center items-center px-28 mt-20">
+      <section ref={menuItems[0].ref} className="h-[100vh] w-full">
+        <div className="flex w-full gap-10 justify-center items-center px-28 mt-10">
           <div>
             <p className="flex gap-1 items-center mb-2">
               <IoStar className="text-[#0e6cf6]" />
@@ -289,15 +289,15 @@ export default function Home() {
         </div>
       </section>
       {/* video */}
-      <section ref={videoRef} className="relative h-screen w-full">
+      <section ref={videoRef} className="relative h-[100vh] w-full">
         <Image
           src={"/section_2.png"}
           alt="section 2 backgroud"
           width={1440}
           height={600}
-          className="w-full h-screen object-cover"
+          className="w-full h-[100vh] object-cover"
         />
-        <div className="absolute translate-x-1/2 -translate-y-1/2 top-1/2">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             src={"/video_banner.png"}
             alt="video component"
@@ -635,12 +635,12 @@ export default function Home() {
         </div>
       </section>
       {/* savings */}
-      <section className="h-screen flex items-center w-full py-10 ">
+      <section className="h-full flex items-center w-full py-10 ">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             SAVINGS
           </p>
-          <h2 className="text-3xl my-7 font-semibold text-center">
+          <h2 className="text-3xl my-4 font-semibold text-center">
             Calculate the{" "}
             <span className="text-[#0e6cf6]">Value Of Exterview</span>
           </h2>
