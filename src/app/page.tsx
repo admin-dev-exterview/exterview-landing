@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { Slider } from "@/components/ui/slider";
+import { useInView, motion } from "motion/react";
 
 interface MenuItem {
   name: string;
@@ -89,6 +90,36 @@ export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollToSection = (sectionRef: any) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const businessRef = useRef(null);
+  const isInView = useInView(menuItems[0].ref, { once: false });
+  const keyInView = useInView(menuItems[1].ref, { once: false });
+  const businessInView = useInView(businessRef, { once: true });
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut", staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const [activeBusiness, setActiveBusiness] = useState("Raas");
@@ -181,21 +212,22 @@ export default function Home() {
   const images = ["/landing_1.png", "/landing_2.png", "/landing_3.png"];
 
   useEffect(() => {
-    // Change image every 3 seconds (3000ms)
-    const intervalId = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Cycle through images
-    }, 50000);
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 1 second
 
-    // Cleanup the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearInterval(interval); // Clean up on component unmount
+  }, [images.length]);
+
   return (
-    <div className="relative bg-[#f3f8fe] text-zinc-950">
+    <div className="relative bg-[#f3f8fe] text-zinc-950 font-Manrope">
       {/* header */}
-      <header className="flex justify-between items-center py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 px-5">
+      <header className="sticky top-0 z-20 flex justify-between items-center py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 px-5">
         <nav
           data-layername="menu"
-          className="flex overflow-hidden flex-wrap gap-5 justify-between px-7 py-2 w-full rounded-2xl border border-solid bg-white bg-opacity-80 border-neutral-900 border-opacity-10 max-md:px-5 max-md:max-w-full"
+          className={`flex overflow-hidden flex-wrap gap-5 justify-between px-7 py-2 w-full rounded-2xl ${
+            isInView ? "border-none" : "border"
+          } border-solid bg-[#f3f8fe] bg-opacity-80 transition-all duration-100 border-black border-opacity-10 backdrop-blur-sm max-md:px-5 max-md:max-w-full`}
         >
           <Image
             //   loading="lazy"
@@ -229,65 +261,78 @@ export default function Home() {
         </nav>
       </header>
       {/* hero */}
-      <section ref={menuItems[0].ref} className="h-[100vh] w-full">
-        <div className="flex w-full gap-10 justify-center items-center px-28 mt-10">
-          <div>
-            <p className="flex gap-1 items-center mb-2">
-              <IoStar className="text-[#0e6cf6]" />
-              <IoStar className="text-[#0e6cf6]" />
-              <IoStar className="text-[#0e6cf6]" />
-              <IoStar className="text-[#0e6cf6]" />
-              <IoStar className="text-[#0e6cf6]" />
-              <span className="ml-1 text-[#10161D] opacity-50">
-                Trusted by Clients
-              </span>
-            </p>
-            <h1 className="text-7xl font-semiboldbold">
-              Next-Gen <br />
-              <span className="text-[#0e6cf6]">Recruitment</span>
-              <br /> with Exterview
-            </h1>
-            <p className="text-xl text-[#10161D] opacity-50 leading-tight my-2 mb-5">
-              Real-time insights and automation for modern
-              <br />
-              recruitment, with experienced interviewers driving
-              <br />
-              every hiring decision.
-            </p>
-            <div className="flex gap-5">
-              <button
-                data-layername="bookADemo"
-                className="px-8 py-3 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full"
-                onClick={() => scrollToSection(menuItems[4].ref)}
-              >
-                Book a demo
-              </button>
-              <button
-                data-layername="bookADemo"
-                className="px-5 py-3 flex items-center text-black gap-2 bg-transparent border border-zinc-400 rounded-full"
-                onClick={() => scrollToSection(videoRef)}
-              >
-                <Image
-                  src={"/play.png"}
-                  alt="play icon"
-                  width={12}
-                  height={12}
-                />
-                Watch the video
-              </button>
+      <motion.section
+        ref={menuItems[0].ref}
+        className="h-[100vh] w-full"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        {isInView && (
+          <div className="flex w-full gap-10 justify-center items-center px-28 mt-10">
+            <div>
+              <p className="flex gap-1 items-center mb-2">
+                <IoStar className="text-[#0e6cf6]" />
+                <IoStar className="text-[#0e6cf6]" />
+                <IoStar className="text-[#0e6cf6]" />
+                <IoStar className="text-[#0e6cf6]" />
+                <IoStar className="text-[#0e6cf6]" />
+                <span className="ml-1 text-[#10161D] opacity-50">
+                  Trusted by Clients
+                </span>
+              </p>
+              <h1 className="text-7xl font-semiboldbold">
+                Next-Gen <br />
+                <span className="text-[#0e6cf6]">Recruitment</span>
+                <br /> with Exterview
+              </h1>
+              <p className="text-xl text-[#10161D] opacity-50 leading-tight my-2 mb-5">
+                Real-time insights and automation for modern
+                <br />
+                recruitment, with experienced interviewers driving
+                <br />
+                every hiring decision.
+              </p>
+              <div className="flex gap-5">
+                <button
+                  data-layername="bookADemo"
+                  className="px-8 py-3 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full"
+                  onClick={() => scrollToSection(menuItems[4].ref)}
+                >
+                  Book a demo
+                </button>
+                <button
+                  data-layername="bookADemo"
+                  className="px-5 py-3 flex items-center text-black gap-2 bg-transparent border border-zinc-400 rounded-full"
+                  onClick={() => scrollToSection(videoRef)}
+                >
+                  <Image
+                    src={"/play.png"}
+                    alt="play icon"
+                    width={12}
+                    height={12}
+                  />
+                  Watch the video
+                </button>
+              </div>
             </div>
+            <motion.div
+              className="relative w-[626px] h-[525px] overflow-hidden"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <Image
+                src={images[imageIndex]}
+                alt={`Carousel image ${imageIndex + 1}`}
+                width={626}
+                height={525}
+                className="w-full h-full object-contain transition-opacity duration-500 ease-in-out"
+              />
+            </motion.div>
           </div>
-          <div>
-            <Image
-              src={images[imageIndex]}
-              alt="hero page image"
-              width={626}
-              height={525}
-              className="w-[626px] w-max-[626px]"
-            />
-          </div>
-        </div>
-      </section>
+        )}
+      </motion.section>
       {/* video */}
       <section ref={videoRef} className="relative h-[100vh] w-full">
         <Image
@@ -307,8 +352,17 @@ export default function Home() {
         </div>
       </section>
       {/* business model */}
-      <section className="h-full w-full py-10">
-        <div className="flex flex-col items-center justify-center">
+      <motion.section
+        ref={businessRef}
+        className="h-full w-full py-10 items-center justify-center flex flex-col"
+        initial="hidden"
+        animate={businessInView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+        <motion.div
+          className="flex flex-col items-center justify-center"
+          variants={itemVariants}
+        >
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             BUSINESS MODULES
           </p>
@@ -316,83 +370,112 @@ export default function Home() {
             Take your business to the global <br /> forefront with{" "}
             <span className="text-[#0e6cf6]">Exterview</span>
           </h2>
-          <div className="flex w-full gap-10 items-center justify-center">
-            {business.map((item) => (
+        </motion.div>
+
+        <motion.div
+          className="flex w-full gap-10 items-center justify-center"
+          variants={containerVariants}
+        >
+          {business.map((item) => (
+            <motion.div
+              key={item.name}
+              className="rounded-xl overflow-hidden flex flex-col items-center justify-center bg-white"
+              onClick={() => setActiveBusiness(item.name)}
+              variants={itemVariants}
+            >
               <div
-                key={item.name}
-                className="rounded-xl overflow-hidden flex flex-col items-center justify-center bg-white"
-                onClick={() => setActiveBusiness(item.name)}
+                className={`w-full flex justify-center items-center p-5 ${
+                  activeBusiness === item.name ? "bg-[#0e6cf6]" : "bg-white"
+                }`}
               >
-                <div
-                  className={` w-full flex justify-center items-center p-5 ${
-                    activeBusiness === item.name ? "bg-[#0e6cf6]" : "bg-white"
-                  }`}
-                >
-                  <Image src={item.img} width={50} height={50} alt="raas" />
-                </div>
-                <p className="border-t w-full text-center border-[#E7E7E8] text-[#10161D] pt-2">
-                  {item.name}
-                </p>
-                <p className="px-2 text-sm text-[#10161D] opacity-50 pb-2">
-                  (<span>{item.desc}</span>)
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mx-64 my-9 bg-white rounded-xl overflow-hidden w-[1100px] h-min-[600px]">
-            <div className="px-5 py-2 border-b border-[#E7E7E8] flex gap-3 items-center">
-              <div className="">
                 <Image
-                  src={"/core-icon.png"}
-                  height={5}
-                  width={15}
-                  alt="core icon"
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  alt="business icon"
                 />
               </div>
-              <span>{activeBusinessDialog?.name}</span>
+              <p className="border-t w-full text-center border-[#E7E7E8] text-[#10161D] pt-2">
+                {item.name}
+              </p>
+              <p className="px-2 text-sm text-[#10161D] opacity-50 pb-2">
+                (<span>{item.desc}</span>)
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="mx-64 my-9 bg-white rounded-xl overflow-hidden w-[1100px] h-min-[600px]"
+          variants={itemVariants}
+        >
+          <div className="px-5 py-2 border-b border-[#E7E7E8] flex gap-3 items-center">
+            <div>
+              <Image
+                src={"/core-icon.png"}
+                height={5}
+                width={15}
+                alt="core icon"
+              />
             </div>
-            <div className="flex items-center justify-end w-full bg-[#e5f0fd] pl-5 pt-10">
-              <div className="flex flex-col w-96 p-5 pl-20">
-                <h2 className="text-4xl font-semibold text-[#0e6cf6]">
-                  {activeBusinessDialog?.head}
-                </h2>
-                <p className="text-[#0A1219] font-light">
-                  {activeBusinessDialog?.des}
-                </p>
-              </div>
-              <div className="flex-1 w-full flex items-center justify-end">
-                <Image
-                  src={activeBusinessDialog?.img as string}
-                  width={700}
-                  height={100}
-                  alt="raas"
-                  className="w-[700px]"
-                />
-              </div>
-            </div>
+            <span>{activeBusinessDialog?.name}</span>
           </div>
-        </div>
-      </section>
+          <div className="flex items-center justify-end w-full bg-[#e5f0fd] pl-5 pt-10">
+            <motion.div
+              className="flex flex-col w-96 p-5 pl-20"
+              variants={itemVariants}
+            >
+              <h2 className="text-4xl font-semibold text-[#0e6cf6]">
+                {activeBusinessDialog?.head}
+              </h2>
+              <p className="text-[#0A1219] font-light">
+                {activeBusinessDialog?.des}
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex-1 w-full flex items-center justify-end"
+              variants={itemVariants}
+            >
+              <Image
+                src={activeBusinessDialog?.img as string}
+                width={700}
+                height={100}
+                alt="business dialog"
+                className="w-[700px]"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.section>
       {/* key feature */}
-      <section ref={menuItems[1].ref} className="h-full w-full py-10 bg-white">
-        <div className="flex flex-col items-center justify-center">
+      <motion.section
+        ref={menuItems[1].ref}
+        className="h-full w-full py-10 bg-white"
+        initial="hidden"
+        animate={keyInView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+        <motion.div
+          className="flex flex-col items-center justify-center"
+          variants={textVariants}
+        >
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             KEY FEATURES
           </p>
           <h2 className="text-3xl my-7 font-semibold text-center">
             Explore the <span className="text-[#0e6cf6]">Key Features</span>
           </h2>
+        </motion.div>
 
-          <div className="px-56">
-            <Image
-              src={"/key_features.png"}
-              width={1440}
-              height={600}
-              alt={"bento image for key features"}
-            />
-          </div>
-        </div>
-      </section>
+        <motion.div className="px-56" variants={containerVariants}>
+          <Image
+            src={"/key_features.png"}
+            width={1440}
+            height={600}
+            alt={"bento image for key features"}
+          />
+        </motion.div>
+      </motion.section>
       {/* workflow */}
       <section ref={menuItems[2].ref} className="h-full w-full py-10">
         <div className="flex flex-col items-center justify-center">
@@ -842,9 +925,9 @@ export default function Home() {
                 <AccordionItem
                   key={index}
                   value={`item-${index + 1}`}
-                  className="border border-gray-200 rounded-md mb-2 overflow-hidden"
+                  className="border border-gray-200 rounded-xl mb-2 overflow-hidden shadow-sm"
                 >
-                  <AccordionTrigger className="hover:no-underline p-4 bg-white [&[data-state=open]>div]:bg-blue-500 [&[data-state=open]]:bg-blue-100 [&[data-state=open]>span]:text-blue-500 [&[data-state=open]>div]:text-white">
+                  <AccordionTrigger className="hover:no-underline hover:px-6  transition-all duration-200 p-4 bg-white [&[data-state=open]>div]:bg-blue-500 [&[data-state=open]]:bg-blue-100 [&[data-state=open]>span]:text-blue-500 [&[data-state=open]>div]:text-white">
                     <span>{item.title}</span>
                   </AccordionTrigger>
                   <AccordionContent className="bg-blue-100">
