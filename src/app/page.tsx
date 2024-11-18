@@ -93,7 +93,6 @@ export default function Home() {
   };
   const businessRef = useRef(null);
   const isInView = useInView(menuItems[0].ref, { once: false });
-  const keyInView = useInView(menuItems[1].ref, { once: false });
   const businessInView = useInView(businessRef, { once: true });
 
   const containerVariants = {
@@ -106,14 +105,6 @@ export default function Home() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-  const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -448,34 +439,128 @@ export default function Home() {
         </motion.div>
       </motion.section>
       {/* key feature */}
-      <motion.section
-        ref={menuItems[1].ref}
-        className="h-full w-full py-10 bg-white"
-        initial="hidden"
-        animate={keyInView ? "visible" : "hidden"}
-        variants={containerVariants}
-      >
-        <motion.div
-          className="flex flex-col items-center justify-center"
-          variants={textVariants}
-        >
+      <section className="h-full w-full py-10 bg-white flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             KEY FEATURES
           </p>
           <h2 className="text-3xl my-7 font-semibold text-center">
             Explore the <span className="text-[#0e6cf6]">Key Features</span>
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.div className="px-56" variants={containerVariants}>
-          <Image
-            src={"/key_features.png"}
-            width={1440}
-            height={600}
-            alt={"bento image for key features"}
-          />
-        </motion.div>
-      </motion.section>
+        <div className="px-48 flex flex-col gap-4 items-center max-w-[1302px]  max-h-[1000px] justify-center">
+          <div className="w-full max-h-[239px] h-[239px] flex gap-4 items-center">
+            <div className="relative max-w-[600px] h-full  flex-1 rounded-xl overflow-hidden bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a]">
+              <div className="h-full flex flex-col items-start justify-center px-10 ">
+                <h2 className="text-4xl text-[#0e6cf6] font-semibold ">
+                  Expert-Led
+                  <br />
+                  Interviews
+                </h2>
+                <p className="text-[#0a1219a8] text-sm w-[300px] mb-5">
+                  Every interview is conducted by an experienced interviewer,
+                  ensuring a personal and tailored candidate experience.
+                </p>
+              </div>
+              <div className="absolute top-0 w-full flex justify-end ">
+                <Image
+                  src={"/interview_key.png"}
+                  width={500}
+                  height={500}
+                  alt={"bento image for key features"}
+                />
+              </div>
+            </div>
+            <div className="max-w-[400px] min-w-[300px] h-full bg-[#f4f7ff] rounded-xl p-5">
+              <p className="text-[10px] text-center bg-[#0e6cf6] rounded-full text-white px-3 py-1 w-fit">
+                KEY FEATURES
+              </p>
+              <h2 className="text-3xl font-semibold">
+                AI-Powered
+                <br />
+                Post-Interview
+                <br />
+                <span className="flex items-center gap-2">
+                  Analysis
+                  <Image
+                    src={"/group_icon.png"}
+                    width={70}
+                    height={20}
+                    alt="group icon"
+                  />
+                </span>
+              </h2>
+              <p className="text-[#0a1219a8] text-sm w-[220px] ">
+                AI-driven insights to evaluate interview performance, sentiment
+                analysis, and detailed reporting.
+              </p>
+            </div>
+          </div>
+          <div className="w-full max-h-[239px] h-[239px] flex gap-4 items-center">
+            <div className="max-w-[300px] min-w-[250px] h-full bg-[#f4f7ff] rounded-xl px-10 py-9">
+              <h2 className="text-3xl text-[#0e6cf6] font-semibold ">
+                Automated
+                <br />
+                Interview
+                <br />
+                Scheduling
+              </h2>
+              <p className="text-[#0a1219a8] text-sm w-[250px] mt-2">
+                Streamlines coordination between candidates and interviewers.
+              </p>
+            </div>
+            <div className="max-w-[600px] h-full flex items-end  flex-1 rounded-xl overflow-hidden bg-[#0e6cf6] ">
+              <div className="h-full flex flex-col items-start justify-center px-10 ">
+                <Image
+                  src={"/eye_icon.png"}
+                  width={50}
+                  height={50}
+                  alt="eye icon"
+                />
+                <h2 className="text-2xl text-white font-semibold ">
+                  Real-Time Analytics
+                  <br />& Reporting
+                </h2>
+                <p className="text-white text-sm w-[250px] mt-2">
+                  Access detailed reports on candidate performance, with
+                  insights backed by AI.
+                </p>
+              </div>
+              <div className="w-full h-full flex flex-col items-end justify-end">
+                <Image
+                  src={"/live-key.png"}
+                  width={500}
+                  height={500}
+                  alt="live exterview page"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="relative w-full min-h-[150px] px-28 items-center rounded-xl bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] flex">
+            <div className="absolute bottom-0">
+              <Image
+                src={"/mentor_key.png"}
+                alt="mentorship image"
+                width={220}
+                height={200}
+              />
+            </div>
+            <div className="flex gap-5 justify-end items-center h-full w-full">
+              <h2 className="text-3xl text-[#0e6cf6] font-bold ml-0">
+                Mentorship
+                <br />
+                Integration
+              </h2>
+              <p className="text-[#0a1219a8] text-sm w-[250px]">
+                Ongoing candidate development through mentor-led sessions,
+                driving long-term growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* workflow */}
       <section ref={menuItems[2].ref} className="h-full w-full py-10">
         <div className="flex flex-col items-center justify-center">
@@ -638,7 +723,7 @@ export default function Home() {
         </div>
       </section>
       {/* kPI */}
-      <section className="h-screen flex items-center w-full py-10 ">
+      <section className="h-screen flex items-center justify-center w-full py-10 ">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             KPI NUMBERS
@@ -649,13 +734,71 @@ export default function Home() {
             Business Success
           </h2>
 
-          <div className="px-56">
-            <Image
-              src={"/kpi.png"}
-              width={1440}
-              height={600}
-              alt={"bento image for key features"}
-            />
+          <div className=" flex gap-4 items-center max-w-[1442px]  max-h-[325px] justify-center">
+            <div className="flex flex-col gap-2 flex-1 min-w-[512px] max-h-[325px]">
+              <div className="flex gap-5 items-center min-w-[412px] h-[253px]">
+                <div className="flex-1 h-full bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl p-5 flex-col flex items-start justify-center gap-2">
+                  <h2 className="text-6xl font-semibold text-[#0e6cf6]">
+                    10,000+
+                  </h2>
+                  <p className="flex items-center text-md gap-2 bg-white rounded-full w-fit px-3 py-1 font-semibold ml-14">
+                    <span>
+                      {" "}
+                      <Image
+                        src={"/cursor.png"}
+                        alt="play icon"
+                        width={12}
+                        height={12}
+                      />
+                    </span>
+                    Interviews Conducted
+                  </p>
+                </div>
+                <div className="min-w-[165px] h-full bg-[#0072F5] rounded-xl flex flex-col items-start justify-end px-4 py-4">
+                  <h2 className="text-4xl text-[#0072F5] font-semibold bg-white rounded-full px-2 py-1">
+                    90%
+                  </h2>
+                  <p className="text-white font-semibold px-2 text-xl">
+                    Clients <br />
+                    Satisfaction
+                  </p>
+                </div>
+              </div>
+              <div className="min-w-[512px]  h-[253px] rounded-xl border overflow-hidden py-5 pl-5 flex flex-col gap-4">
+                <h2 className="text-4xl font-medium px-2">
+                  <span className="text-[#0072F5] font-bold">20+</span>
+                  Enterprise Client
+                </h2>
+                <div className="flex justify-end">
+                  <Image
+                    src={"/client_kpi.png"}
+                    width={450}
+                    height={123}
+                    alt="clients_kpis"
+                    className="max-w-[595px] object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="min-w-[412px] h-[325px]  min-h-[325px] flex-1 relative bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl">
+              <div className="flex h-full flex-col justify-center">
+                <h2 className="text-8xl font-bold px-5">10x</h2>
+                <p className="text-2xl pl-10">
+                  Faster Hiring
+                  <br />
+                  Process
+                </p>
+              </div>
+              <div className="absolute top-0 -right-10 ">
+                <Image
+                  src={"/kpi_profile.png"}
+                  width={812}
+                  height={625}
+                  alt="profile kpi's"
+                  className="max-w-[400px] max-h-[325px] h-full object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
