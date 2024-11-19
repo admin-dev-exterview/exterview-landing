@@ -10,12 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { MoveRightIcon } from "lucide-react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaPhoneVolume,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { Slider } from "@/components/ui/slider";
 import { useInView, motion, AnimatePresence } from "motion/react";
