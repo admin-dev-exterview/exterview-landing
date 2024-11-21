@@ -15,6 +15,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { Slider } from "@/components/ui/slider";
 import { useInView, motion, AnimatePresence } from "motion/react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   name: string;
@@ -70,6 +71,7 @@ const workImage = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const menuItems: MenuItem[] = [
     { name: "Home", layerName: "home", ref: useRef(null) },
     { name: "Features", layerName: "features", ref: useRef(null) },
@@ -214,10 +216,10 @@ export default function Home() {
   return (
     <div className="relative bg-[#f3f8fe] text-zinc-950 font-Manrope">
       {/* header */}
-      <header className="sticky top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl">
+      <header className="sm:sticky  top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl">
         <nav
           data-layername="menu"
-          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe] sm:bg-opacity-80 sm:backdrop-blur-sm  sm:px-2 sm:py-2 px-0 py-0 rounded-xl ${
+          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-2 sm:py-2 px-0 py-0 rounded-xl ${
             isInView ? "border-none" : "border"
           }`}
         >
@@ -1128,7 +1130,10 @@ export default function Home() {
                   <p className="text-[#0A1219] opacity-45 font-thin text-sm">
                     {item.desc}
                   </p>
-                  <a className="font-light text-sm text-[#393F45] flex items-center gap-1">
+                  <a
+                    className="font-light text-sm text-[#393F45] flex items-center gap-1"
+                    onClick={() => router.push(`/blog/${index + 1}`)}
+                  >
                     Learn More
                     <span>
                       <MoveRightIcon className="text-[#0e6cf6] h-5 w-5" />
@@ -1202,11 +1207,11 @@ export default function Home() {
             Introducing the world&apos;s first ever AI that can run screening
             calls and shortlist thousands of candidates in a blink of an eye
           </p>
-          <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] rounded-full p-2 px-3">
+          <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] cursor-pointer rounded-full p-2 px-3">
             <FaPhoneVolume />
             +91 9111 4851 04
           </button>
-          <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] rounded-full p-2 px-3">
+          <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] cursor-pointer rounded-full p-2 px-3">
             <MdOutlineAlternateEmail />
             info.exterview.io
           </button>
@@ -1214,18 +1219,28 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-start gap-2">
           <h2 className="font-semibold">Quick Links</h2>
-          <a className="font-light">Home</a>
-          <a className="font-light">Pricing</a>
-          <a className="font-light">Book a Demo</a>
-          <a className="font-light">Contact Us</a>
-          <a className="font-light">Privacy Policty</a>
-          <a className="font-light">Terms of Service</a>
+          <a className="font-light cursor-pointer">Home</a>
+          <a className="font-light cursor-pointer">Book a Demo</a>
+          <a className="font-light cursor-pointer">Pricing</a>
+          <a className="font-light cursor-pointer">Contact Us</a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/privacy-policy")}
+          >
+            Privacy Policty
+          </a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/terms-and-conditions")}
+          >
+            Terms of Service
+          </a>
         </div>
         <div className="flex flex-col items-start gap-2">
           <h2 className="font-semibold">Social</h2>
-          <p className="font-light">Facebook</p>
-          <p className="font-light">Instagram</p>
-          <p className="font-light">Twitter</p>
+          <p className="font-light cursor-pointer">Facebook</p>
+          <p className="font-light cursor-pointer">Instagram</p>
+          <p className="font-light cursor-pointer">Twitter</p>
         </div>
       </section>
     </div>
