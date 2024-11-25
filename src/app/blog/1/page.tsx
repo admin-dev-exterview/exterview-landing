@@ -1,11 +1,7 @@
 import { blogContent } from "@/config/blog_content";
+import { categorytype } from "@/types/category";
 function Page() {
   const data = blogContent[0];
-
-  interface categorytype {
-    subtitle?: string;
-    paragraphs?: string;
-  }
 
   if (!data) {
     return <div>Post not found.</div>;

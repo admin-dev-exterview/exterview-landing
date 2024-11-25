@@ -79,7 +79,7 @@ export default function Home() {
     { name: "Case Studies", layerName: "caseStudies", ref: useRef(null) },
     { name: "Contact us", layerName: "contactUs", ref: useRef(null) },
   ];
-  const videoRef = useRef(null);
+  // const videoRef = useRef(null);
   // const featuresRef = useRef(null);
   // const worksRef = useRef(null);
   // const studiesRef = useRef(null);
@@ -164,18 +164,18 @@ export default function Home() {
   const caseStudies = [
     {
       img: "/study_1.png",
-      title: "The Future of AI",
+      title: "Best Practices for Conducting a Virtual Interview for HR Teams",
       desc: "Get detailed, AI-analyzed reports on candidate performance, including skill assessments and behavioral insights.",
     },
     {
       img: "/study_2.png",
-      title: "The Metaverse Explained",
+      title: "How Interview-as-a-Service Helps in Scaling Tech Teams",
       desc: "Get detailed, AI-analyzed reports on candidate performance, including skill assessments and behavioral insights.",
     },
     {
       img: "/study_3.png",
-      title: "Top 5 Productivity Apps",
-      desc: "Get detailed, AI-analyzed reports on candidate performance, including skill assessments and behavioral insights.",
+      title: "Interviewing Gen Z",
+      desc: "Adapting Virtual Interview Techniques for a New Generation",
     },
   ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -219,7 +219,7 @@ export default function Home() {
       <header className="sm:sticky  top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl">
         <nav
           data-layername="menu"
-          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-2 sm:py-2 px-0 py-0 rounded-xl ${
+          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-5 sm:py-2 px-0 py-0 rounded-xl ${
             isInView ? "border-none" : "border"
           }`}
         >
@@ -227,7 +227,7 @@ export default function Home() {
           <Image
             src={"/logo.png"}
             alt="Exterview logo"
-            width={180}
+            width={130}
             height={40}
             className="object-contain shrink-0"
           />
@@ -370,7 +370,7 @@ export default function Home() {
                 >
                   Book a demo
                 </button>
-                <button
+                {/* <button
                   data-layername="bookADemo"
                   className="px-5 py-3 flex items-center text-black gap-2 bg-transparent border border-zinc-400 rounded-full"
                   onClick={() => scrollToSection(videoRef)}
@@ -382,7 +382,7 @@ export default function Home() {
                     height={12}
                   />
                   Watch the video
-                </button>
+                </button> */}
               </div>
             </div>
             <motion.div
@@ -403,7 +403,7 @@ export default function Home() {
         )}
       </motion.section>
       {/* video */}
-      <section ref={videoRef} className="relative h-[100vh] w-full">
+      {/* <section ref={videoRef} className="relative h-[100vh] w-full">
         <div className="w-full h-[100vh]">
           <Image
             src={"/section_2.png"}
@@ -421,7 +421,7 @@ export default function Home() {
             height={400}
           />
         </div>
-      </section>
+      </section> */}
       {/* business model */}
       <motion.section
         ref={businessRef}
@@ -894,7 +894,7 @@ export default function Home() {
         </div>
       </section>
       {/* Clients */}
-      <section className="h-full flex flex-col items-center w-full py-10 bg-white">
+      {/* <section className="h-full flex flex-col items-center w-full py-10 bg-white">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             OUR CLIENTS
@@ -956,7 +956,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* savings */}
       <section className="h-full flex items-center w-full py-10 bg-gray-50">
@@ -1105,13 +1105,10 @@ export default function Home() {
             Get Updated with Industry Insights
           </h2>
 
-          <div className="sm:px-56 px-2 w-full flex sm:flex-row flex-col items-center justify-center gap-5">
+          <div className="sm:px-56 px-2 w-full flex sm:flex-row flex-col items-start justify-center gap-5">
             {caseStudies.map((item, index) => (
-              <div
-                key={index}
-                className="max-w-[400px] overflow-hidden rounded-xl"
-              >
-                <div>
+              <div key={index} className="max-w-[400px]  rounded-xl">
+                <div className="w-full h-full overflow-hidden">
                   <Image
                     src={item.img}
                     width={350}
@@ -1184,7 +1181,7 @@ export default function Home() {
         <button
           data-layername="bookADemo"
           className="px-8 py-2 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full"
-          onClick={() => scrollToSection(menuItems[4].ref)}
+          onClick={() => router.push("/contact-us")}
         >
           Request a demo
         </button>
