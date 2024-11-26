@@ -366,7 +366,7 @@ export default function Home() {
                 <button
                   data-layername="bookADemo"
                   className="px-8 py-3 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
-                  onClick={() => scrollToSection(menuItems[4].ref)}
+                  onClick={() => router.push("/contact-us")}
                 >
                   Book a demo
                 </button>
@@ -1217,7 +1217,12 @@ export default function Home() {
         <div className="flex flex-col items-start gap-2">
           <h2 className="font-semibold">Quick Links</h2>
           <a className="font-light cursor-pointer">Home</a>
-          <a className="font-light cursor-pointer">Book a Demo</a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/contact-us")}
+          >
+            Book a Demo
+          </a>
           <a className="font-light cursor-pointer">Pricing</a>
           <a className="font-light cursor-pointer">Contact Us</a>
           <a
