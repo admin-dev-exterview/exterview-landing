@@ -1,41 +1,78 @@
+"use client";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import Image from "next/image";
-import React from "react";
+import { useRouter } from "next/navigation";
+import { useRef, useState } from "react";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 
 interface MenuItem {
   name: string;
   layerName: string;
+  ref: React.RefObject<HTMLElement>;
 }
 
-const menuItems: MenuItem[] = [
-  { name: "Home", layerName: "home" },
-  { name: "Features", layerName: "features" },
-  { name: "How it works", layerName: "howItWorks" },
-  { name: "Case Studies", layerName: "caseStudies" },
-  { name: "Contact us", layerName: "contactUs" },
-];
+function Header() {
+  const menuItems: MenuItem[] = [
+    { name: "Home", layerName: "home", ref: useRef(null) },
+    { name: "Features", layerName: "features", ref: useRef(null) },
+    { name: "How it works", layerName: "howItWorks", ref: useRef(null) },
+    { name: "Case Studies", layerName: "caseStudies", ref: useRef(null) },
+    { name: "Contact us", layerName: "contactUs", ref: useRef(null) },
+  ];
+  const isInView = useInView(menuItems[0].ref, { once: false });
+  const router = useRouter();
 
-const Header: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
   return (
-    <header className="flex z-10 flex-col self-center w-full text-md font-medium tracking-tight max-md:max-w-full px-5 py-5">
+    <header
+      ref={menuItems[0].ref}
+      className="sm:sticky top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl"
+    >
       <nav
         data-layername="menu"
-        className="flex overflow-hidden flex-wrap gap-5 justify-between px-7 py-2 w-full rounded-2xl border border-solid bg-white bg-opacity-80 border-neutral-900 border-opacity-10 max-md:px-5 max-md:max-w-full"
+        className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-5 sm:py-2 px-0 py-0 rounded-xl ${
+          isInView ? "border-none" : "border"
+        }`}
       >
+        {/* Logo */}
         <Image
-          //   loading="lazy"
           src={"/logo.png"}
           alt="Exterview logo"
-          width={180}
+          width={130}
           height={40}
-          className="object-contain shrink-0 my-auto max-w-full p-2"
+          className="object-contain shrink-0"
         />
-        <div className="flex flex-wrap gap-3.5 max-md:max-w-full">
-          <div className="flex flex-wrap flex-auto items-center text-neutral-900 text-opacity-40 max-md:max-w-full">
+
+        {/* Hamburger Icon */}
+        <div className="md:hidden">
+          <button
+            className="p-2 focus:outline-none"
+            onClick={toggleDrawer}
+            aria-label="Toggle Menu"
+          >
+            {isDrawerOpen ? (
+              <RxCross2 width={24} height={24} />
+            ) : (
+              <RxHamburgerMenu width={24} height={24} />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-3.5 items-center px-5 ">
+          <div className="flex items-center text-neutral-900 text-opacity-40">
             {menuItems.map((item) => (
               <div
                 key={item.layerName}
                 data-layername={item.layerName}
-                className="gap-2.5 self-stretch px-7 py-1 my-auto whitespace-nowrap max-md:px-5"
+                className="px-7 py-1 whitespace-nowrap hover:text-black transition-colors duration-300 ease-in-out cursor-pointer font-semibold"
+                onClick={() => {
+                  router.push("/");
+                }}
               >
                 {item.name}
               </div>
@@ -43,14 +80,70 @@ const Header: React.FC = () => {
           </div>
           <button
             data-layername="bookADemo"
-            className="px-8 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full"
+            className="px-6 py-2 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
           >
             Book a demo
           </button>
         </div>
+
+        {/* Mobile Drawer */}
+        <AnimatePresence>
+          {isDrawerOpen && (
+            <motion.div
+              className="absolute top-0 left-0 w-full h-screen bg-white z-30 flex flex-col p-5 md:hidden transition-all duration-200"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="flex justify-between items-center">
+                <Image
+                  src={"/logo.png"}
+                  alt="Exterview logo"
+                  width={120}
+                  height={30}
+                  className="object-contain"
+                />
+                <button
+                  className="p-2 focus:outline-none"
+                  onClick={toggleDrawer}
+                  aria-label="Close Menu"
+                >
+                  <RxCross2 width={24} height={24} />
+                </button>
+              </div>
+              <div className="flex flex-col mt-5 gap-5">
+                {menuItems.map((item) => (
+                  <div
+                    key={item.layerName}
+                    data-layername={item.layerName}
+                    className="px-3 py-2 border-b border-neutral-200 text-neutral-900 cursor-pointer"
+                    onClick={() => {
+                      router.push("/");
+                    }}
+                  >
+                    {item.name}
+                  </div>
+                ))}
+                <button
+                  data-layername="bookADemo"
+                  className="mt-5 px-5 py-3 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                >
+                  Book a demo
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

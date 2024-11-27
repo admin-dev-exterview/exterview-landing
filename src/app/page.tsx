@@ -79,11 +79,6 @@ export default function Home() {
     { name: "Case Studies", layerName: "caseStudies", ref: useRef(null) },
     { name: "Contact us", layerName: "contactUs", ref: useRef(null) },
   ];
-  // const videoRef = useRef(null);
-  // const featuresRef = useRef(null);
-  // const worksRef = useRef(null);
-  // const studiesRef = useRef(null);
-  // const contactRef = useRef(null);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollToSection = (sectionRef: any) => {
@@ -366,7 +361,7 @@ export default function Home() {
                 <button
                   data-layername="bookADemo"
                   className="px-8 py-3 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
-                  onClick={() => router.push("/contact-us")}
+                  onClick={() => router.push("/booking")}
                 >
                   Book a demo
                 </button>
@@ -1181,7 +1176,7 @@ export default function Home() {
         <button
           data-layername="bookADemo"
           className="px-8 py-2 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full"
-          onClick={() => router.push("/contact-us")}
+          onClick={() => router.push("/booking")}
         >
           Request a demo
         </button>
@@ -1206,11 +1201,11 @@ export default function Home() {
           </p>
           <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] cursor-pointer rounded-full p-2 px-3">
             <FaPhoneVolume />
-            +91 9111 4851 04
+            +91 96525 21125
           </button>
           <button className="flex gap-3 items-center border border-[#278CFF] bg-[#0061DD] cursor-pointer rounded-full p-2 px-3">
             <MdOutlineAlternateEmail />
-            info.exterview.io
+            info@exterview.io
           </button>
           <p>Copyright © 2024 — exterview</p>
         </div>
@@ -1219,12 +1214,28 @@ export default function Home() {
           <a className="font-light cursor-pointer">Home</a>
           <a
             className="font-light cursor-pointer"
-            onClick={() => router.push("/contact-us")}
+            onClick={() => router.push("/booking")}
           >
             Book a Demo
           </a>
-          <a className="font-light cursor-pointer">Pricing</a>
-          <a className="font-light cursor-pointer">Contact Us</a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/pricing")}
+          >
+            Pricing
+          </a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/contact-us")}
+          >
+            Contact Us
+          </a>
+          <a
+            className="font-light cursor-pointer"
+            onClick={() => router.push("/refund-cancellation-policy")}
+          >
+            Refund & Cancellation Policy
+          </a>
           <a
             className="font-light cursor-pointer"
             onClick={() => router.push("/privacy-policy")}

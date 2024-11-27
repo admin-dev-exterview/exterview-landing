@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { securityData } from "@/config/security";
+import { refundData } from "@/config/refund";
 
 function Page() {
   return (
@@ -9,12 +9,12 @@ function Page() {
       <div className="bg-[#f3f8fe] text-zinc-950 font-Manrope w-full p-20">
         {/* Title (h1) */}
         <h1 className="text-6xl font-bold text-center py-5">
-          {securityData.title}
+          {refundData.title}
         </h1>
-        <p>{securityData.para}</p>
+        <p>{refundData.para}</p>
 
         {/* Categories (h2 and their content) */}
-        {securityData.categories.map((category, categoryIndex) => (
+        {refundData.categories.map((category, categoryIndex) => (
           <div key={categoryIndex}>
             <h2 className="text-4xl font-bold  py-5">{category.category}</h2>
 
