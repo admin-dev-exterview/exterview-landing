@@ -5,37 +5,80 @@ import Header from "@/components/Header";
 
 const plans = [
   {
-    name: "INDIVIDUAL",
+    name: "Free",
     price: { monthly: 0, yearly: 0 },
+    caption: "Best for Individuals or Small Teams Trying Out the Platform",
     features: [
-      "Access to a pre-vetted talent pool",
-      "5 AI interviews per month",
-      "AI sourcing",
-      "Talent management dashboard",
+      "Up to 3 team members",
+      "3 credits/day",
+      "Last 3 assignment history",
+      "Sharable video playback link",
+      "Shareable report",
+      "Downloadable PDF report",
+      "Leaderboard",
+      "Detailed interview report",
+      "Live coding environment playback",
     ],
     isCurrent: true,
   },
   {
-    name: "EARLY STAGE",
-    price: { monthly: 149, yearly: 1197 },
+    name: "Team",
+    price: { monthly: 14500, yearly: 156000 },
+    caption: "Best for Small Companies Hiring Actively",
     features: [
-      "Everything from Free",
-      "20 AI interviews per month",
-      "Bulk invite candidates to AI interviews",
-      "Built-in ATS flow with custom pipelines",
+      "Up to 20 team members (1 admin included)",
+      "50 credits/month",
+      "Unlimited assignment history",
+      "Sharable video playback link",
+      "Shareable report",
+      "Downloadable PDF report",
+      "Leaderboard",
+      "Campus drives",
+      "Reports and analytics",
+      "Custom forms",
+      "Basic branding",
     ],
     isCurrent: false,
   },
   {
-    name: "GROWTH",
-    price: { monthly: 499, yearly: 4816 },
+    name: "Business",
+    price: { monthly: 58000, yearly: 624000 },
+    caption: "Best for Large Companies Scaling Their Hiring Process",
     features: [
-      "Everything from Early Stage",
-      "100 AI interviews per month",
-      "Custom questions only interview type",
-      "Interview in 9 different languages",
-      "Customize branding",
-      "50+ custom ATS integrations built-in",
+      "Up to 50 team members (3 admins included)",
+      "120 credits/month",
+      "Unlimited assignment history",
+      "Sharable video playback link",
+      "Shareable report",
+      "Downloadable PDF report",
+      "Leaderboard",
+      "Advanced branding",
+      "ATS integration",
+      "SAML + SSO",
+      "Priority support",
+      "Custom feedback formats",
+      "Advanced reports",
+    ],
+    isCurrent: false,
+  },
+  {
+    name: "Enterprise",
+    isCustom: true,
+    price: { monthly: "Custom", yearly: "Custom" },
+    caption: "Fully Customizable for Enterprise Needs",
+    features: [
+      "Team Size: Customizable",
+      "Customizable credits/month",
+      "Unlimited assignment history",
+      "Sharable video playback link",
+      "Shareable report",
+      "Downloadable PDF report",
+      "Leaderboard",
+      "Import questions",
+      "Dedicated account manager",
+      "Advanced branding",
+      "Tailored reports and analytics",
+      "Fully customizable workflows and forms",
     ],
     isCurrent: false,
   },
@@ -74,22 +117,30 @@ function Page() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col lg:flex-row justify-center gap-8">
+        <div className="flex flex-col lg:flex-row justify-center gap-8 px-5">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`bg-white shadow-lg rounded-lg py-2 px-2 flex-1 `}
             >
-              <div className="bg-gray-50 p-2 rounded-lg">
-                <h2 className="text-sm font-normal mb-4 bg-white w-fit px-2 py-1 rounded-lg">
+              <div className="bg-gray-50 p-2 rounded-lg max-h-[200px] min-h-[200px] flex flex-col justify-between">
+                <h2 className="text-sm font-normal bg-white w-fit px-2 py-1 rounded-lg">
                   {plan.name}
                 </h2>
-                <p className="text-2xl font-bold text-gray-700 mb-4">
-                  ${plan.price[billingCycle]}{" "}
-                  <span className="text-sm text-gray-500">
-                    / {billingCycle === "monthly" ? "month" : "year"}
-                  </span>
-                </p>
+                <p className="text-[12px] my-2  px-1">{plan?.caption}</p>
+                {plan?.isCustom ? (
+                  <p className="text-2xl font-bold text-gray-700 mb-4">
+                    Custom
+                  </p>
+                ) : (
+                  <p className="text-2xl font-bold text-gray-700 mb-4">
+                    ${plan.price[billingCycle]}{" "}
+                    <span className="text-sm text-gray-500">
+                      / {billingCycle === "monthly" ? "month" : "year"}
+                    </span>
+                  </p>
+                )}
+
                 {!plan.isCurrent ? (
                   <button className="bg-[#0e6cf6] text-white w-full py-3 rounded-full text-sm font-bold">
                     Upgrade
