@@ -136,7 +136,7 @@ function Page() {
                   </p>
                 ) : (
                   <p className="text-2xl font-bold text-gray-700 mb-4">
-                    ${plan.price[billingCycle]}{" "}
+                    ₹{plan.price[billingCycle]}{" "}
                     <span className="text-sm text-gray-500">
                       / {billingCycle === "monthly" ? "month" : "year"}
                     </span>
