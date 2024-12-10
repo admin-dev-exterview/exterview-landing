@@ -160,17 +160,18 @@ export default function Home() {
     {
       img: "/study_1.png",
       title: "Best Practices for Conducting a Virtual Interview for HR Teams",
-      desc: "Get detailed, AI-analyzed reports on candidate performance, including skill assessments and behavioral insights.",
+      desc: "As remote work and digital hiring become more prevalent, conducting virtual interviews has become an essential skill for HR teams.",
     },
     {
       img: "/study_2.png",
       title: "How Interview-as-a-Service Helps in Scaling Tech Teams",
-      desc: "Get detailed, AI-analyzed reports on candidate performance, including skill assessments and behavioral insights.",
+      desc: "Interview-as-a-Service (IaaS) platforms revolutionize the hiring process by outsourcing initial technical interviews.",
     },
     {
       img: "/study_3.png",
-      title: "Interviewing Gen Z",
-      desc: "Adapting Virtual Interview Techniques for a New Generation",
+      title:
+        "Interviewing Gen Z: Adapting Virtual Interview Techniques for a New Generation",
+      desc: "As the first generation to grow up fully immersed in technology, Gen Z brings unique qualities, skills, and expectations to the workforce.",
     },
   ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -1102,7 +1103,10 @@ export default function Home() {
 
           <div className="sm:px-56 px-2 w-full flex sm:flex-row flex-col items-start justify-center gap-5">
             {caseStudies.map((item, index) => (
-              <div key={index} className="max-w-[400px]  rounded-xl">
+              <div
+                key={index}
+                className="max-w-[400px] min-h-[650px]  rounded-xl"
+              >
                 <div className="w-full h-full overflow-hidden">
                   <Image
                     src={item.img}
@@ -1112,16 +1116,19 @@ export default function Home() {
                     className="hover:scale-105 transition duration-200"
                   />
                 </div>
-                <div className="p-2 w-[350px] flex flex-col items-start justify-center gap-1">
-                  <p className="text-[#0A1219] opacity-45 font-thin text-sm">
-                    SAVINGS
-                  </p>
-                  <h4 className="font-semibold text-[#393F45] text-xl">
-                    {item.title}
-                  </h4>
-                  <p className="text-[#0A1219] opacity-45 font-thin text-sm">
-                    {item.desc}
-                  </p>
+                <div className="p-2 w-[350px] h-full min-h-[250px] flex flex-col items-start justify-between gap-1">
+                  <div className="flex flex-col gap-2">
+                    <p className="text-[#0A1219] opacity-45 font-thin text-sm">
+                      SAVINGS
+                    </p>
+                    <h4 className="font-semibold text-[#393F45] text-xl">
+                      {item.title}
+                    </h4>
+                    <p className="text-[#0A1219] opacity-45 font-thin text-sm">
+                      {item.desc}
+                    </p>
+                  </div>
+
                   <a
                     className="font-light text-sm text-[#393F45] flex items-center gap-1"
                     onClick={() => router.push(`/blog/${index + 1}`)}
@@ -1207,7 +1214,7 @@ export default function Home() {
             <MdOutlineAlternateEmail />
             info@exterview.io
           </button>
-          <p>Copyright © 2024 — exterview</p>
+          <p>Copyright © 2024 - Exterview Solutions Private Limited</p>
         </div>
         <div className="flex flex-col items-start gap-2">
           <h2 className="font-semibold">Quick Links</h2>

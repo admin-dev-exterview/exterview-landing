@@ -32,7 +32,7 @@ function Footer() {
           <MdOutlineAlternateEmail />
           info@exterview.io
         </button>
-        <p>Copyright © 2024 — exterview</p>
+        <p>Copyright © 2024 - Exterview Solutions Private Limited</p>
       </div>
       <div className="flex flex-col items-start gap-2">
         <h2 className="font-semibold">Quick Links</h2>
