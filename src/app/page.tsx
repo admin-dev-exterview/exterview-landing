@@ -215,7 +215,7 @@ export default function Home() {
       <header className="sm:sticky  top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl">
         <nav
           data-layername="menu"
-          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-5 sm:py-2 px-0 py-0 rounded-xl ${
+          className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-5 md:px-2 sm:py-2 px-0 py-0 rounded-xl ${
             isInView ? "border-none" : "border"
           }`}
         >
@@ -229,7 +229,7 @@ export default function Home() {
           />
 
           {/* Hamburger Icon */}
-          <div className="md:hidden">
+          <div className="sm:hidden  block">
             <button
               className="p-2 focus:outline-none"
               onClick={toggleDrawer}
@@ -244,13 +244,13 @@ export default function Home() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-3.5 items-center px-5 ">
+          <div className="hidden sm:flex sm:flex-wrap gap-3.5 items-center px-5 ">
             <div className="flex items-center text-neutral-900 text-opacity-40">
               {menuItems.map((item) => (
                 <div
                   key={item.layerName}
                   data-layername={item.layerName}
-                  className="px-7 py-1 whitespace-nowrap hover:text-black transition-colors duration-300 ease-in-out cursor-pointer font-semibold"
+                  className="px-2 mx-2 text-sm py-1 whitespace-nowrap hover:text-black transition-colors duration-300 ease-in-out cursor-pointer font-semibold"
                   onClick={() => scrollToSection(item.ref)}
                 >
                   {item.name}
@@ -259,7 +259,7 @@ export default function Home() {
             </div>
             <button
               data-layername="bookADemo"
-              className="px-6 py-2 text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
+              className="px-5 py-2 text-sm text-white bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] rounded-full hover:bg-gradient-to-tr transition-all duration-300 ease-in-out"
               onClick={() => scrollToSection(menuItems[4].ref)}
             >
               Book a demo
@@ -270,7 +270,7 @@ export default function Home() {
           <AnimatePresence>
             {isDrawerOpen && (
               <motion.div
-                className="absolute top-0 left-0 w-full h-screen bg-white z-30 flex flex-col p-5 md:hidden transition-all duration-200"
+                className="absolute top-0 left-0 w-full h-screen bg-white z-30 flex flex-col p-5 sm:hidden  transition-all duration-200"
                 initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
@@ -328,7 +328,7 @@ export default function Home() {
       {/* hero */}
       <motion.section
         ref={menuItems[0].ref}
-        className="h-[100vh] w-full"
+        className="h-[100vh] md:h-full w-full"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -440,7 +440,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="flex w-full sm:gap-10 gap-3 items-center justify-center sm:px-0 px-2"
+          className="flex w-full sm:gap-10 gap-3 items-center justify-center sm:px-0  px-2"
           variants={containerVariants}
         >
           {business.map((item) => (
@@ -473,7 +473,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="sm:mx-64 mx-5 my-9 bg-white rounded-xl overflow-hidden sm:w-[1100px] w-full h-min-[600px]"
+          className="sm:mx-64 md:mx-5 mx-5 my-9 bg-white rounded-xl  overflow-hidden sm:w-[1100px]  w-full h-min-[600px]"
           variants={itemVariants}
         >
           <div className="px-5 py-2 border-b border-[#E7E7E8] flex gap-3 items-center">
@@ -528,7 +528,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="sm:px-48 px-2 flex flex-col gap-4 items-center sm:max-w-[1302px] w-full  max-h-[1000px] justify-center">
+        <div className="sm:px-48  px-2 flex flex-col gap-4 items-center sm:max-w-[1302px] w-full  max-h-[1000px] justify-center">
           <div className="w-full sm:max-h-[239px] max-h-full sm:h-[239px] h-full flex sm:flex-row flex-col gap-4 items-center">
             <div className="relative sm:max-w-[600px] w-full sm:h-full h-[239px]  flex-1 rounded-xl overflow-hidden bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a]">
               <div className="h-full flex flex-col items-start justify-center px-10 ">
@@ -651,7 +651,7 @@ export default function Home() {
             <span className="text-[#0e6cf6]">exterview work</span>?
           </h2>
 
-          <div className="sm:mx-56 mx-2 sm:w-[1200px] w-full rounded-xl overflow-hidden p-3 bg-white">
+          <div className="sm:mx-56  mx-2 sm:w-[1200px]  w-full rounded-xl overflow-hidden p-3 bg-white">
             <div className="bg-gradient-to-bl from-[#0e6cf6] to-[#5450fe] flex items-center justify-center pt-20 rounded-t-xl">
               <Image
                 src={activeWorkImage?.img as string}
@@ -753,7 +753,7 @@ export default function Home() {
         </div>
       </section>
       {/* Reports */}
-      <section className="sm:h-[100vh] h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-10 bg-white">
+      <section className="sm:h-[100vh] md:h-full md:px-5 h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-10 bg-white">
         <div className="flex flex-col sm:items-start items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             REPORTS
@@ -802,7 +802,7 @@ export default function Home() {
         </div>
       </section>
       {/* kPI */}
-      <section className="sm:h-[100vh] h-full flex items-center justify-center w-full py-10 overflow-hidden">
+      <section className="sm:h-[100vh] md:h-full h-full flex items-center justify-center w-full py-10 overflow-hidden">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             KPI NUMBERS
@@ -1068,7 +1068,7 @@ export default function Home() {
       </section>
 
       {/* why */}
-      <section className="sm:h-[100vh] h-full flex items-center w-full py-10 bg-white">
+      <section className="sm:h-[100vh] md:h-full h-full flex items-center w-full py-10 bg-white">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             WHY
@@ -1078,7 +1078,7 @@ export default function Home() {
             <span className="text-[#0e6cf6]">Exterview</span>
           </h2>
 
-          <div className="sm:px-56 px-2">
+          <div className="sm:px-56 md:px-5 px-2">
             <Image
               src={"/why.png"}
               width={1440}
@@ -1091,7 +1091,7 @@ export default function Home() {
       {/* case studies */}
       <section
         ref={menuItems[3].ref}
-        className="sm:h-[100vh] h-full flex items-center w-full py-10 "
+        className="sm:h-[100vh] md:h-full h-full flex items-center w-full py-10 "
       >
         <div className="flex flex-col items-center justify-center w-full">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
@@ -1101,11 +1101,11 @@ export default function Home() {
             Get Updated with Industry Insights
           </h2>
 
-          <div className="sm:px-56 px-2 w-full flex sm:flex-row flex-col items-start justify-center gap-5">
+          <div className="sm:px-56 md:px-2 px-2 w-full flex sm:flex-row flex-wrap  flex-col items-center justify-center gap-5">
             {caseStudies.map((item, index) => (
               <div
                 key={index}
-                className="max-w-[400px] min-h-[650px]  rounded-xl"
+                className="max-w-[400px] sm:min-h-[650px] md:min-h-[300px]  rounded-xl"
               >
                 <div className="w-full h-full overflow-hidden">
                   <Image
@@ -1145,7 +1145,7 @@ export default function Home() {
         </div>
       </section>
       {/* Faq's */}
-      <section className="sm:h-[100vh] h-full sm:py-0 py-10 flex items-center w-full bg-white">
+      <section className="sm:h-[100vh] md:h-full md:py-10 h-full sm:py-0 py-10 flex items-center w-full bg-white">
         <div className="flex flex-col items-center justify-center w-full">
           <p className="bg-white border px-5 py-2 rounded-full text-[#0e6cf6] text-sm">
             FAQ&apos;S
