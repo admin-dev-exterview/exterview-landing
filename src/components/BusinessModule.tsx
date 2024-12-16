@@ -91,7 +91,7 @@ function BusinessModule() {
       </motion.div>
 
       <motion.div
-        className="flex w-full sm:gap-10 gap-3 items-center justify-between sm:px-36  px-2"
+        className="flex w-full sm:gap-10 gap-3 items-center justify-between sm:px-52  px-2"
         variants={containerVariants}
       >
         {business.map((item) => (

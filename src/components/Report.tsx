@@ -27,8 +27,8 @@ function Report() {
     },
   ];
   return (
-    <section className="sm:h-[100vh] md:h-full md:px-36 h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-20 ">
-      <div className="flex flex-col sm:items-start items-center justify-center">
+    <section className="sm:h-[100vh] md:h-full md:px-52 h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-20 ">
+      <div className="flex flex-col sm:items-start items-center justify-center px-2">
         <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
           REPORTS
         </p>

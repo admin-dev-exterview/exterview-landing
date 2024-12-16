@@ -22,7 +22,7 @@ function Hero() {
   return (
     <motion.section
       ref={ref}
-      className="h-full md:h-full w-full"
+      className="h-[80vh] w-full"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -40,12 +40,12 @@ function Hero() {
                 Trusted by Clients
               </span>
             </p>
-            <h1 className="sm:text-6xl text-5xl font-semibold ">
+            <h1 className="sm:text-7xl text-5xl font-semibold ">
               Next-Gen <br />
               <span className="text-[#0e6cf6]">Recruitment</span>
               <br /> with Exterview
             </h1>
-            <p className="sm:text-sm text-lg text-[#10161D] opacity-50 leading-tight my-2 mb-5 font-light pl-2">
+            <p className="sm:text-lg text-lg text-[#10161D] opacity-50 leading-tight my-2 mb-5 font-light pl-2">
               Real-time insights and automation for modern
               <br />
               recruitment, with experienced interviewers driving

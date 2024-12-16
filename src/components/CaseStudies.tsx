@@ -49,15 +49,15 @@ function CaseStudies() {
                   className="hover:scale-105 transition duration-200"
                 />
               </div>
-              <div className="py-2 w-[350px] h-full min-h-[250px] flex flex-col items-start justify-between gap-1">
-                <div className="flex flex-col gap-2">
-                  <p className="text-[#0A1219] font-semibold opacity-45  text-[12px]">
+              <div className="py-2 w-[350px] h-full min-h-[220px] flex flex-col items-start justify-between gap-1">
+                <div className="flex flex-col ">
+                  <p className="text-[#0A1219] mb-2 font-semibold opacity-45  text-[12px]">
                     SAVINGS
                   </p>
                   <h4 className="font-bold text-[#393F45] text-lg">
                     {item.title}
                   </h4>
-                  <p className="text-[#0A1219] opacity-45 font-thin text-[12px]">
+                  <p className="text-[#0A1219] opacity-45 font-thin text-sm">
                     {item.desc}
                   </p>
                 </div>
