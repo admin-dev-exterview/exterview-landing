@@ -102,7 +102,7 @@ function BusinessModule() {
             variants={itemVariants}
           >
             <div
-              className={`w-full flex justify-center items-center p-5 ${
+              className={`w-full flex justify-center items-center sm:p-5 p-3 ${
                 activeBusiness === item.name ? "bg-[#0e6cf6]" : "bg-white"
               }`}
             >
@@ -111,12 +111,13 @@ function BusinessModule() {
                 width={50}
                 height={50}
                 alt="business icon"
+                className="w-auto max-h-[50px] object-cover"
               />
             </div>
-            <p className="border-t w-full text-lg font-bold text-center border-[#E7E7E8] text-[#10161D] pt-2">
+            <p className="border-t w-full sm:text-lg text-sm font-bold text-center border-[#E7E7E8] text-[#10161D] sm:pt-2 pt-1">
               {item.name}
             </p>
-            <p className="px-2 text-[12px] text-[#10161D] opacity-50 pb-2">
+            <p className="px-2 sm:text-[12px] text-[8px] text-[#10161D] opacity-50 pb-2">
               (<span>{item.desc}</span>)
             </p>
           </motion.div>

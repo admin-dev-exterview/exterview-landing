@@ -16,6 +16,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Exterview",
   description: "Exterview an ai based recruitment platform",
+  openGraph: {
+    title: "Exterview",
+    description: "Exterview an ai based recruitment platform",
+    url: "Exterview.in",
+    siteName: "Exterview",
+    images: [{ url: "/logo.png", width: "50", height: "50" }],
+  },
 };
 
 export default function RootLayout({

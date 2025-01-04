@@ -38,7 +38,6 @@ export default function Home() {
   };
   const isInView = useInView(menuItems[0].ref, { once: false });
 
-  // const caseStudies = [
   //   {
   //     img: "/study_1.png",
   //     title: "Best Practices for Conducting a Virtual Interview for HR Teams",
