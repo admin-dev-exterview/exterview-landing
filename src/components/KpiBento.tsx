@@ -17,11 +17,11 @@ function KpiBento() {
 
         <div className="sm:p-0 px-5 flex sm:flex-row flex-col gap-4 items-center justify-center sm:max-w-[1442px] max-w-full sm:max-h-[325px] max-h-full">
           {/* Left Column */}
-          <div className="flex flex-col gap-4 flex-1 sm:min-w-[512px] min-w-full sm:max-h-[325px] max-h-full">
+          <div className="flex flex-col gap-4 items-center flex-1 sm:min-w-[512px] min-w-full sm:max-h-[325px] max-h-full">
             {/* Top Row in Left Column */}
-            <div className="flex gap-5 items-center sm:min-w-[412px] min-w-full h-[253px]">
+            <div className="flex sm:flex-row flex-col gap-5 items-center sm:min-w-[412px] min-w-full h-[253px]">
               {/* Card 1 */}
-              <div className="flex-1 h-full bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl p-5 flex flex-col items-start justify-center gap-2">
+              <div className="flex-1 min-w-[40vh] sm:min-w-0 h-full bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl p-5 flex flex-col items-start justify-center gap-2">
                 <h2 className="sm:text-6xl text-2xl font-semibold text-[#0e6cf6]">
                   10,000+
                 </h2>
@@ -39,7 +39,7 @@ function KpiBento() {
               </div>
 
               {/* Card 2 */}
-              <div className="sm:min-w-[165px] min-w-[60px] h-full bg-[#0072F5] rounded-xl flex flex-col items-start justify-end px-4 py-4">
+              <div className="sm:min-w-[165px] min-w-[40vh] h-full bg-[#0072F5] rounded-xl flex flex-col items-start justify-end px-4 py-4">
                 <h2 className="text-4xl text-[#0072F5] font-semibold bg-white rounded-full px-2 py-1">
                   90%
                 </h2>
@@ -51,8 +51,8 @@ function KpiBento() {
             </div>
 
             {/* Bottom Row in Left Column */}
-            <div className="sm:min-w-[512px] min-w-[200px] sm:w-[512px] w-full sm:h-[253px] h-full rounded-xl border overflow-hidden py-5 px-5 flex flex-col gap-4">
-              <h2 className="text-4xl font-medium px-2">
+            <div className="sm:min-w-[512px] min-w-[40vh] sm:w-[512px] w-[40vh] sm:h-[253px] h-full rounded-xl border overflow-hidden py-5 mt-5 px-5 flex flex-col gap-4">
+              <h2 className="sm:text-4xl text-xl font-medium px-2">
                 <span className="text-[#0072F5] font-bold">20+</span> Enterprise
                 Clients
               </h2>
@@ -62,23 +62,25 @@ function KpiBento() {
                   width={450}
                   height={123}
                   alt="clients_kpis"
-                  className="max-w-[595px] object-contain"
+                  className="sm:max-w-[595px] max-w-full object-contain"
                 />
               </div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="min-w-[412px] h-[325px] min-h-[325px] flex-1 relative bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl">
-            <div className="flex h-full flex-col justify-center">
-              <h2 className="text-8xl font-bold px-5">10x</h2>
-              <p className="text-2xl pl-10">
+          <div className="sm:min-w-[412px] min-w-[40vh] h-[325px] min-h-[325px] flex-1 relative bg-gradient-to-tr to-[#0e6bf634] from-[#5350fe3a] rounded-xl">
+            <div className="flex h-full flex-col justify-center z-50">
+              <h2 className="sm:text-8xl text-4xl font-bold px-5 z-50 sm:mt-0 mt-16">
+                10x
+              </h2>
+              <p className="text-2xl sm:pl-10 pl-5 z-50">
                 Faster Hiring
                 <br />
                 Process
               </p>
             </div>
-            <div className="absolute top-0 -right-10">
+            <div className="absolute top-0 sm:-right-10 -right-20 z-0">
               <Image
                 src={"/kpi_profile.png"}
                 width={812}
