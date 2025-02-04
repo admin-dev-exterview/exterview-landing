@@ -97,22 +97,26 @@ function BusinessModule() {
         {business.map((item) => (
           <motion.div
             key={item.name}
-            className="rounded-xl w-full overflow-hidden flex flex-col items-center justify-center bg-white max-w-[160px]"
+            className="rounded-xl w-full overflow-hidden flex flex-col items-center justify-center bg-white max-w-[160px] min-h-32"
             onClick={() => setActiveBusiness(item.name)}
             variants={itemVariants}
           >
             <div
-              className={`w-full flex justify-center items-center sm:p-5 p-3 ${
+              className={` h-full w-full min-h-24 ${
                 activeBusiness === item.name ? "bg-[#0e6cf6]" : "bg-white"
               }`}
             >
-              <Image
-                src={item.img}
-                width={50}
-                height={50}
-                alt="business icon"
-                className="w-auto max-h-[50px] object-cover"
-              />
+              <div
+                className={`w-full flex justify-center items-center sm:p-5 p-3 `}
+              >
+                <Image
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  alt="business icon"
+                  className="w-auto max-h-[60px] object-cover"
+                />
+              </div>
             </div>
             <p className="border-t w-full sm:text-lg text-sm font-bold text-center border-[#E7E7E8] text-[#10161D] sm:pt-2 pt-1">
               {item.name}
