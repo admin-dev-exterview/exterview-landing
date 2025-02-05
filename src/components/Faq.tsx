@@ -28,7 +28,7 @@ function Faq() {
     },
   ];
   return (
-    <section className="sm:h-[100vh] md:h-full sm:pb-10 h-full sm:py-0 py-10 flex items-center bg-[#f3f8fe] w-full ">
+    <section className="sm:h-[100vh] md:h-full sm:pb-10 h-full sm:px-0 px-5 sm:py-0 py-10 flex items-center bg-[#f3f8fe] w-full ">
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
@@ -39,7 +39,7 @@ function Faq() {
           </h2>
         </div>
 
-        <div className="w-full mt-5 sm:px-80 px-2">
+        <div className="w-full mt-5 sm:px-80 px-0">
           <Accordion type="single" collapsible className="w-full">
             {items.map((item, index) => (
               <AccordionItem

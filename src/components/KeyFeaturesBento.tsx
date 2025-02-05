@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function KeyFeaturesBento() {
   return (
-    <section className="h-full w-full py-10  flex flex-col items-center justify-center">
+    <section className="h-full w-full py-10 sm:px-0 px-5  flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center">
         <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
           KEY FEATURES

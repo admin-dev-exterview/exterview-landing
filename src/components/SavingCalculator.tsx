@@ -18,7 +18,7 @@ function SavingCalculator() {
   const savedHours = totalManHourCal - totalAiHours;
   const percentSaved = ((savedHours / totalManHourCal) * 100).toFixed(2);
   return (
-    <section className="h-full flex items-center w-full py-10 ">
+    <section className="h-full flex items-center w-full py-10 sm:px-0 px-5">
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
@@ -30,7 +30,7 @@ function SavingCalculator() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 p-4 h-full lg:px-72">
+        <div className="flex flex-col lg:flex-row gap-8 p-4 h-full sm:px-72 px-0">
           {/* Left Panel */}
           <div className="flex-1 bg-white p-6 sm:p-4 md:p-6 rounded-xl flex items-start flex-col justify-between w-full">
             <h2 className="text-xl sm:text-2xl font-bold">

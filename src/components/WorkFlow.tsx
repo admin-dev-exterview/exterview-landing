@@ -10,7 +10,7 @@ function WorkFlow() {
   const [activeWork, setActiveWork] = useState("1");
   const activeWorkImage = workImage.find((item) => item.id === activeWork);
   return (
-    <section className="h-full w-full py-20">
+    <section className="h-full w-full py-20 sm:px-0 px-5">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
