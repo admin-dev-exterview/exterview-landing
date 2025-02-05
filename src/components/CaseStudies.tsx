@@ -23,7 +23,7 @@ function CaseStudies() {
     },
   ];
   return (
-    <section className="sm:h-full md:h-full h-full flex items-center w-full pt-20 ">
+    <section className="sm:h-full md:h-full h-full flex items-center w-full pt-20 sm:px-0 px-5">
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-col items-center justify-center">
           <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
@@ -34,7 +34,7 @@ function CaseStudies() {
           </h2>
         </div>
 
-        <div className="sm:px-36 pt-10 px-2 w-full flex sm:flex-row flex-wrap  flex-col items-center justify-center gap-5">
+        <div className="sm:px-36 pt-10 px-0 w-full flex sm:flex-row flex-wrap  flex-col items-center justify-center gap-5">
           {caseStudies.map((item, index) => (
             <div
               key={index}

@@ -27,7 +27,7 @@ function Report() {
     },
   ];
   return (
-    <section className="sm:h-[100vh] md:h-full md:px-52 h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-20 overflow-hidden">
+    <section className="sm:h-[100vh] sm:px-0 px-5 md:h-full md:px-52 h-full flex sm:flex-row flex-col items-center justify-center gap-5 w-full py-20 overflow-hidden">
       <div className="flex flex-col sm:items-start items-center justify-center px-2">
         <p className="bg-white border px-3 py-1 rounded-full text-[#0e6cf6] text-[12px] font-semibold">
           REPORTS
@@ -44,7 +44,7 @@ function Report() {
         <Accordion
           type="single"
           collapsible
-          className=" w-[400px] mt-5 sm:px-0 px-10"
+          className=" w-[400px] mt-5 sm:px-0 px-8"
         >
           {reportItems.map((item, index) => (
             <AccordionItem

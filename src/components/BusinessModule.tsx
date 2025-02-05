@@ -72,7 +72,7 @@ function BusinessModule() {
   return (
     <motion.section
       ref={businessRef}
-      className="h-full w-full py-20 items-center justify-center flex flex-col"
+      className="h-full w-full sm:px-0 px-5 py-20 items-center justify-center flex flex-col"
       initial="hidden"
       animate={businessInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -145,13 +145,13 @@ function BusinessModule() {
         </div>
         <div className="flex sm:flex-row flex-col sm:items-center items-start justify-end w-full bg-[#e5f0fd] pl-5 pt-10">
           <motion.div
-            className="flex flex-col w-96 p-5 sm:pl-20 pl-2"
+            className="flex flex-col sm:w-96 w-full p-5 sm:pl-20 pl-2"
             variants={itemVariants}
           >
-            <h2 className="text-4xl font-bold text-[#0e6cf6]">
+            <h2 className="sm:text-4xl text-2xl font-bold text-[#0e6cf6]">
               {activeBusinessDialog?.head}
             </h2>
-            <p className="text-[#0A1219] font-light sm:text-sm text-sm">
+            <p className="text-[#0A1219] font-light sm:text-sm text-sm w-full">
               {activeBusinessDialog?.des}
             </p>
           </motion.div>
