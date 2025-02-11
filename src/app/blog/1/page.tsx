@@ -14,11 +14,11 @@ function Page() {
     <div className="bg-white text-zinc-950 font-Manrope w-full ">
       <Header />
       <h1 className="text-4xl font-bold text-center pt-8">
-        Can AI Replace Recruiters? Samaya is Changing the Game in 2025
+        Can AI Replace Recruiters? Smaya is Changing the Game in 2025
       </h1>
       <div className="sm:px-52 px-0 py-10 w-full">
         <Image
-          src={"/samaya.png"}
+          src={"/Samaya.png"}
           width={1440}
           height={600}
           alt={"bento image for key features"}
@@ -33,12 +33,12 @@ function Page() {
           is recruitment. Gone are the days of sifting through countless
           resumes, endless email chains, and scheduling nightmares. The future
           of hiring is here, and it&apos;s called{" "}
-          <span className="font-bold">Samaya</span>.
+          <span className="font-bold">Smaya</span>.
         </p>
         <p className="text-lg">
-          Samaya is an AI-powered recruitment assistant designed to automate and
+          Smaya is an AI-powered recruitment assistant designed to automate and
           streamline the entire hiring process, from sourcing candidates to
-          onboarding new hires. But Samaya is not just another automation tool;
+          onboarding new hires. But Smaya is not just another automation tool;
           it&apos;s a sophisticated AI agent that understands the nuances of
           human interaction and decision-making.
         </p>
@@ -99,18 +99,17 @@ function Page() {
           </li>
         </ul>
         <p>
-          Samaya addresses these challenges head-on, providing a faster, more
+          Smaya addresses these challenges head-on, providing a faster, more
           efficient, and more objective approach to recruitment. By automating
           tedious tasks, minimizing bias, streamlining communication, and
-          leveraging data-driven insights, Samaya empowers recruiters to focus
-          on what truly matters: finding the best talent for their
-          organizations.
+          leveraging data-driven insights, Smaya empowers recruiters to focus on
+          what truly matters: finding the best talent for their organizations.
         </p>
         <h2 className="text-3xl font-bold">
-          How Samaya Works: A Deep Dive into the AI-Powered Process
+          How Smaya Works: A Deep Dive into the AI-Powered Process
         </h2>
         <p className="text-lg">
-          Samaya leverages the power of AI to automate and optimize every stage
+          Smaya leverages the power of AI to automate and optimize every stage
           of the recruitment process, creating a seamless and efficient
           experience for both recruiters and candidates. Let&lsquo;s explore
           each stage in detail:
@@ -120,19 +119,19 @@ function Page() {
             <p className="font-bold">1. Job Role Creation:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated JD Generation: Samaya can automatically generate
+                Automated JD Generation: Smaya can automatically generate
                 comprehensive and accurate job descriptions based on your input.
                 Simply provide key details like the job title, required skills,
-                and responsibilities, and Samaya will craft a compelling JD that
+                and responsibilities, and Smaya will craft a compelling JD that
                 attracts top talent.
               </li>
               <li>
-                JD Enhancement: Samaya can analyze existing job descriptions and
+                JD Enhancement: Smaya can analyze existing job descriptions and
                 suggest improvements to make them more inclusive, engaging, and
                 effective
               </li>
               <li>
-                JD Optimization: Samaya can optimize job descriptions for search
+                JD Optimization: Smaya can optimize job descriptions for search
                 engines and job boards, ensuring maximum visibility and reach.
               </li>
             </ul>
@@ -141,20 +140,20 @@ function Page() {
             <p className="font-bold">2. Candidate Sourcing:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Multi-Channel Sourcing: Samaya casts a wide net to find the best
+                Multi-Channel Sourcing: Smaya casts a wide net to find the best
                 candidates, sourcing from various channels like job boards
                 (Indeed, LinkedIn, Monster), social media platforms (LinkedIn,
                 Twitter, GitHub), and internal databases
               </li>
               <li>
-                AI-Powered Matching: Samaya uses advanced AI algorithms to match
+                AI-Powered Matching: Smaya uses advanced AI algorithms to match
                 candidates to open positions based on skills, experience, and
                 other relevant criteria. This ensures that recruiters are
                 presented with the most qualified candidates, saving them
                 valuable time and effort.
               </li>
               <li>
-                Targeted Outreach: Samaya can automate personalized outreach to
+                Targeted Outreach: Smaya can automate personalized outreach to
                 potential candidates, increasing engagement and response rates.
               </li>
             </ul>
@@ -163,19 +162,19 @@ function Page() {
             <p className="font-bold">3. Candidate Screening:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Resume Screening: Samaya efficiently screens resumes
+                Automated Resume Screening: Smaya efficiently screens resumes
                 and applications, filtering out unqualified candidates and
                 identifying those who best match the job requirements. This
                 eliminates the need for recruiters to manually review hundreds
                 or even thousands of resumes.
               </li>
               <li>
-                Skills Extraction and Analysis: Samaya extracts key skills and
+                Skills Extraction and Analysis: Smaya extracts key skills and
                 experience from resumes and profiles, using NLP and ML to
                 analyze and rank candidates based on their suitability.
               </li>
               <li>
-                Bias Mitigation: Samaya is designed to minimize bias in the
+                Bias Mitigation: Smaya is designed to minimize bias in the
                 screening process by focusing on objective criteria and avoiding
                 reliance on potentially biased information like names, photos,
                 or social media profiles.
@@ -186,18 +185,18 @@ function Page() {
             <p className="font-bold">4. Interview Scheduling:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Scheduling: Samaya automates the interview scheduling
+                Automated Scheduling: Smaya automates the interview scheduling
                 process, considering the availability of both candidates and
                 interviewers. This eliminates the back-and-forth emails and
                 phone calls that often plague traditional scheduling.
               </li>
               <li>
-                Calendar Integration: Samaya integrates with popular calendar
+                Calendar Integration: Smaya integrates with popular calendar
                 applications (Google Calendar, Outlook Calendar) to seamlessly
                 schedule interviews and send reminders.
               </li>
               <li>
-                Self-Scheduling: Samaya allows candidates to self-schedule
+                Self-Scheduling: Smaya allows candidates to self-schedule
                 interviews based on their availability, providing a convenient
                 and flexible experience.
               </li>
@@ -207,17 +206,17 @@ function Page() {
             <p className="font-bold">5. AI-Powered Screening Interviews:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Interviews: Samaya conducts initial screening
+                Automated Interviews: Smaya conducts initial screening
                 interviews, asking pre-defined or dynamically generated
                 questions based on the job requirements and candidate profile.
               </li>
               <li>
-                Natural Language Interaction: Samaya uses NLP to understand and
+                Natural Language Interaction: Smaya uses NLP to understand and
                 respond to candidate answers in a natural and conversational
                 manner, creating a more engaging and human-like experience.
               </li>
               <li>
-                Candidate Evaluation: Samaya analyzes candidate responses,
+                Candidate Evaluation: Smaya analyzes candidate responses,
                 evaluating their skills, experience, and communication
                 abilities. This provides recruiters with valuable insights to
                 make informed decisions.
@@ -228,14 +227,14 @@ function Page() {
             <p className="font-bold">6. Background Verification:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Verification: Samaya automates the background
+                Automated Verification: Smaya automates the background
                 verification process, integrating with third-party providers to
                 verify information like education, employment history, and
                 criminal records using 3rd Party platforms like Spring Verify
                 from India and Checkr from the US.
               </li>
               <li>
-                Compliance and Efficiency: Samaya ensures compliance with
+                Compliance and Efficiency: Smaya ensures compliance with
                 relevant regulations and streamlines the verification process,
                 reducing turnaround time and manual effort.
               </li>
@@ -246,17 +245,17 @@ function Page() {
             <p className="font-bold">7. Offer Letter Management:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Offer Letters: Samaya generates offer letters based on
+                Automated Offer Letters: Smaya generates offer letters based on
                 pre-defined templates and customized details, ensuring accuracy
                 and consistency.
               </li>
               <li>
-                E-signature Integration: Samaya integrates with e-signature
+                E-signature Integration: Smaya integrates with e-signature
                 platforms like DocuSign to facilitate a seamless and secure
                 offer acceptance process.
               </li>
               <li>
-                Offer Tracking: Samaya tracks offer letter status, providing
+                Offer Tracking: Smaya tracks offer letter status, providing
                 recruiters with real-time updates and notifications.
               </li>
             </ul>
@@ -265,17 +264,17 @@ function Page() {
             <p className="font-bold">8. Onboarding:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Onboarding Tasks: Samaya automates various onboarding
+                Automated Onboarding Tasks: Smaya automates various onboarding
                 tasks, such as creating accounts, sending welcome emails, and
                 assigning training materials.
               </li>
               <li>
-                Personalized Onboarding: Samaya provides a personalized
+                Personalized Onboarding: Smaya provides a personalized
                 onboarding experience for new hires, tailoring information and
                 resources based on their roles and needs.
               </li>
               <li>
-                Onboarding Progress Tracking: Samaya tracks onboarding progress
+                Onboarding Progress Tracking: Smaya tracks onboarding progress
                 and provides updates to both new hires and HR teams.
               </li>
             </ul>
@@ -285,28 +284,28 @@ function Page() {
           Human-in-the-Loop: Balancing AI with Human Expertise
         </h2>
         <p className="text-lg">
-          While Samaya excels at automating tasks and providing data-driven
+          While Smaya excels at automating tasks and providing data-driven
           insights, it also recognizes the importance of human judgment and
-          intuition in the recruitment process. Samaya incorporates a
+          intuition in the recruitment process. Smaya incorporates a
           human-in-the-loop approach, ensuring that recruiters remain involved
           in critical decision points:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-4">
           <li>
-            <span className="font-bold">Candidate Evaluation:</span> Samaya can
+            <span className="font-bold">Candidate Evaluation:</span> Smaya can
             flag candidates with unique backgrounds or skillsets for manual
             review by recruiters, allowing for a more nuanced and holistic
             assessment.
           </li>
           <li>
-            <span className="font-bold">Interview Feedback:</span> While Samaya
+            <span className="font-bold">Interview Feedback:</span> While Smaya
             provides summaries and insights from AI-powered interviews,
             recruiters can review the full transcripts and recordings to gain a
             deeper understanding of the candidate&apos;s communication style,
             personality, and cultural fit.
           </li>
           <li>
-            <span className="font-bold">Final Hiring Decisions:</span>Samaya can
+            <span className="font-bold">Final Hiring Decisions:</span>Smaya can
             provide recommendations based on its analysis, but the final hiring
             decision ultimately rests with human recruiters. This ensures that
             human judgment, intuition, and experience are incorporated into the
@@ -319,18 +318,18 @@ function Page() {
           recruitment process that is both effective and human-centric.
         </p>
         <h2 className="text-3xl font-bold">
-          The Technology Powering Samaya: A Glimpse Under the Hood
+          The Technology Powering Smaya: A Glimpse Under the Hood
         </h2>
         <p className="text-lg">
-          Samaya is built on a sophisticated technology architecture that
+          Smaya is built on a sophisticated technology architecture that
           leverages the latest advancements in AI and machine learning.
           Here&apos;s a high-level overview of the key components:
         </p>
         <p className="text-lg font-bold">
-          Technology Powering Samaya: A High-Level Overview
+          Technology Powering Smaya: A High-Level Overview
         </p>
         <p className="text-lg">
-          Samaya is built on a robust and scalable technology architecture that
+          Smaya is built on a robust and scalable technology architecture that
           leverages cutting-edge advancements in AI and machine learning, along
           with carefully chosen tools and frameworks to ensure scalability,
           performance, and maintainability. Here&apos;s a closer look at the key
@@ -414,7 +413,7 @@ function Page() {
           </li>
         </ul>
         <h2 className="text-3xl font-bold pt-6">
-          Building and Configuring Samaya
+          Building and Configuring Smaya
         </h2>
 
         <Image
@@ -426,14 +425,14 @@ function Page() {
         />
 
         <p className="text-lg">
-          Samaya&apos;s architecture is designed to be flexible and
-          customizable, allowing you to tailor it to your specific needs and
-          workflows. Here&apos;s a high-level overview of the process:
+          Smaya&apos;s architecture is designed to be flexible and customizable,
+          allowing you to tailor it to your specific needs and workflows.
+          Here&apos;s a high-level overview of the process:
         </p>
         <ul className="list-decimal pl-6 mb-4 space-y-4">
           <li>
             Create an Agent: Define the core purpose and functionalities of your
-            Samaya agent, such as candidate screening, interview scheduling, or
+            Smaya agent, such as candidate screening, interview scheduling, or
             onboarding assistance.
           </li>
           <li>
@@ -443,12 +442,12 @@ function Page() {
           </li>
           <li>
             Set Triggers: Define the events or conditions that will trigger
-            Samaya&apos;s actions, such as receiving a new application,
+            Smaya&apos;s actions, such as receiving a new application,
             scheduling an interview, or completing a background check.
           </li>
           <li>
             Core Instructions: Provide clear and concise instructions to guide
-            Samaya&apos;s behavior and decision-making, ensuring it aligns with
+            Smaya&apos;s behavior and decision-making, ensuring it aligns with
             your recruitment policies and processes.
           </li>
           <li>
@@ -462,13 +461,13 @@ function Page() {
             its tasks efficiently.
           </li>
           <li>
-            Share Your Agent: Deploy your Samaya agent to various channels, such
+            Share Your Agent: Deploy your Smaya agent to various channels, such
             as your website, messaging platforms, or internal HR systems, to
             interact with candidates and recruiters.
           </li>
           <li>
             Labeling: Implement a labeling system to categorize and organize
-            data, enabling Samaya to learn and improve its performance over time
+            data, enabling Smaya to learn and improve its performance over time
           </li>
           <li>
             Scheduled Messages: Configure scheduled messages to automate
@@ -511,66 +510,66 @@ function Page() {
           </li>
           <li>
             Override Mode: Provide an override mode to allow human recruiters to
-            intervene and adjust Samaya&apos;s actions if necessary, maintaining
+            intervene and adjust Smaya&apos;s actions if necessary, maintaining
             flexibility and control.
           </li>
         </ul>
         <p>
           By following this process and leveraging the comprehensive
-          capabilities of Samaya&apos;s technology architecture, you can build
+          capabilities of Smaya&apos;s technology architecture, you can build
           and configure a powerful AI-powered recruitment assistant that meets
           your specific needs and transforms your hiring process. This robust
           technology architecture, combined with a user-friendly interface and a
-          human-in-the-loop approach, makes Samaya a powerful and practical
+          human-in-the-loop approach, makes Smaya a powerful and practical
           solution for modern recruitment challenges.
         </p>
         <h2 className="text-3xl font-bold">
-          Why Samaya is a Game-Changer in 2025 and Beyond
+          Why Smaya is a Game-Changer in 2025 and Beyond
         </h2>
         <p className="text-lg">
-          Several factors converge to make Samaya a game-changer in the
+          Several factors converge to make Smaya a game-changer in the
           recruitment landscape of 2025 and beyond:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-3">
           <li>
             Advancements in AI: The rapid advancements in AI technology,
             particularly in NLP and ML, have made it possible to create AI
-            agents like Samaya that can understand and respond to human language
-            with increasing accuracy and sophistication. This enables Samaya to
+            agents like Smaya that can understand and respond to human language
+            with increasing accuracy and sophistication. This enables Smaya to
             engage in natural and meaningful interactions with candidates,
             providing a more human-like experience.
           </li>
           <li>
             Increased Data Availability: The abundance of data available today,
-            both from internal HR systems and external sources, provides Samaya
+            both from internal HR systems and external sources, provides Smaya
             with the fuel it needs to learn and improve its performance. By
-            analyzing vast amounts of data, Samaya can identify patterns,
-            predict outcomes, and make more informed decisions.
+            analyzing vast amounts of data, Smaya can identify patterns, predict
+            outcomes, and make more informed decisions.
           </li>
           <li>
             Changing Workforce Dynamics: The rise of remote work, the gig
             economy, and the increasing demand for specialized skills have made
-            the recruitment process more complex and challenging. Samaya
-            provides the tools and automation needed to navigate this evolving
-            landscape, enabling companies to find and hire the best talent
-            regardless of location or employment type.
+            the recruitment process more complex and challenging. Smaya provides
+            the tools and automation needed to navigate this evolving landscape,
+            enabling companies to find and hire the best talent regardless of
+            location or employment type.
           </li>
           <li>
-            Focus on Diversity and Inclusion: Samaya&apos;s AI-powered screening
+            Focus on Diversity and Inclusion: Smaya&apos;s AI-powered screening
             and evaluation can help reduce unconscious bias in the hiring
             process, promoting diversity and inclusion in the workplace. By
-            focusing on objective criteria and skills, Samaya ensures that all
+            focusing on objective criteria and skills, Smaya ensures that all
             candidates are evaluated fairly, regardless of their background.
           </li>
           <li>
-            Enhanced Candidate Experience: Samaya provides a seamless and
+            Enhanced Candidate Experience: Smaya provides a seamless and
             positive experience for candidates, from initial application to
             onboarding. By automating tedious tasks, streamlining communication,
-            and providing personalized interactions, Samaya creates a more
+            and providing personalized interactions, Smaya creates a more
             engaging and efficient candidate journey
           </li>
           <li>
-            Increased Recruiter Productivity: Samaya empowers recruiters by
+            Increased Recruiter Productivity: Smaya empowers recruiters by
             automating repetitive tasks and providing data-driven insights. This
             frees up recruiters to focus on building relationships with
             candidates, conducting in-depth interviews, and making strategic
@@ -578,7 +577,7 @@ function Page() {
           </li>
         </ul>
         <p>
-          These factors combine to make Samaya a truly transformative solution
+          These factors combine to make Smaya a truly transformative solution
           for companies looking to optimize their recruitment process and gain a
           competitive edge in the talent market.
         </p>
@@ -588,7 +587,7 @@ function Page() {
         <p className="text-lg">
           We believe that AI has the potential to revolutionize recruitment,
           making it faster, more efficient, and more equitable. Our mission with
-          Samaya is to:
+          Smaya is to:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-3">
           <li>
@@ -609,12 +608,12 @@ function Page() {
             Improve Candidate Experience: Provide a seamless, engaging, and
             positive experience for candidates throughout the entire recruitment
             journey. By automating communication, providing personalized
-            feedback, and offering a user-friendly interface, Samaya enhances
-            the candidate experience and strengthens the employer brand.
+            feedback, and offering a user-friendly interface, Smaya enhances the
+            candidate experience and strengthens the employer brand.
           </li>
           <li>
             Promote Diversity and Inclusion: Minimize bias in the hiring process
-            by focusing on objective criteria and skills. Samaya&apos;s
+            by focusing on objective criteria and skills. Smaya&apos;s
             AI-powered screening and evaluation help create a more level playing
             field for all candidates, regardless of their background, promoting
             a more diverse and inclusive workforce.
@@ -622,17 +621,17 @@ function Page() {
           <li>
             Drive Data-Driven Decisions: Provide recruiters with valuable data
             and insights to make informed decisions about their hiring process.
-            Samaya&apos;s analytics and reporting capabilities enable companies
+            Smaya&apos;s analytics and reporting capabilities enable companies
             to track key metrics, identify areas for improvement, and optimize
             their recruitment strategies.
           </li>
         </ul>
         <p>
-          We are passionate about building the future of recruitment with
-          Samaya. We envision a world where companies can find and hire the best
-          talent with speed, efficiency, and fairness. By combining the power of
-          AI with the irreplaceable value of human expertise, Samaya is
-          transforming recruitment for the better.
+          We are passionate about building the future of recruitment with Smaya.
+          We envision a world where companies can find and hire the best talent
+          with speed, efficiency, and fairness. By combining the power of AI
+          with the irreplaceable value of human expertise, Smaya is transforming
+          recruitment for the better.
         </p>
       </div>
       <Footer />
