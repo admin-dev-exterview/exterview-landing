@@ -22,7 +22,7 @@ function Hero() {
   return (
     <motion.section
       ref={ref}
-      className="sm:h-[80vh] h-full w-full"
+      className="sm:h-[90vh] h-full w-full"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}

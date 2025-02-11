@@ -16,6 +16,7 @@ import WorkFlow from "@/components/WorkFlow";
 import KeyFeaturesBento from "@/components/KeyFeaturesBento";
 import BusinessModule from "@/components/BusinessModule";
 import Hero from "@/components/Hero";
+import Smaya from "@/components/Smaya";
 
 interface MenuItem {
   name: string;
@@ -203,6 +204,7 @@ export default function Home() {
           />
         </div>
       </section> */}
+      <Smaya />
 
       {/* business model */}
       <BusinessModule />

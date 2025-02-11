@@ -6,9 +6,9 @@ function CaseStudies() {
   const router = useRouter();
   const caseStudies = [
     {
-      img: "/study_1.png",
-      title: "Best Practices for Conducting a Virtual Interview for HR Teams",
-      desc: "As remote work and digital hiring become more prevalent, conducting virtual interviews has become an essential skill for HR teams.",
+      img: "/casestudy_1.jpg",
+      title: "Can AI Replace Recruiters? Samaya is Changing the Game in 2025",
+      desc: "The year is 2025. The world is abuzz with technological advancements, and artificial intelligence (AI) is at the forefront of this revolution.  The future of hiring is here, and it's called Samaya.",
     },
     {
       img: "/study_2.png",
