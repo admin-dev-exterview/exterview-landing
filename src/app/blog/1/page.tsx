@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { blogContent } from "@/config/blog_content";
 import Image from "next/image";
 
@@ -9,8 +11,9 @@ function Page() {
   }
 
   return (
-    <div className="bg-[#f3f8fe] text-zinc-950 font-Manrope w-full p-20">
-      <h1 className="text-6xl font-bold text-center">
+    <div className="bg-white text-zinc-950 font-Manrope w-full ">
+      <Header />
+      <h1 className="text-4xl font-bold text-center pt-8">
         Can AI Replace Recruiters? Samaya is Changing the Game in 2025
       </h1>
       <div className="sm:px-52 px-0 py-10 w-full">
@@ -22,7 +25,7 @@ function Page() {
           className="w-full"
         />
       </div>
-      <div className="sm:px-64 px-2 space-y-6 text-lg">
+      <div className="sm:px-64 px-2 space-y-6 text-lg pb-20">
         <p className="text-lg">
           The year is 2025. The world is abuzz with technological advancements,
           and artificial intelligence (AI) is at the forefront of this
@@ -410,7 +413,9 @@ function Page() {
             </ul>
           </li>
         </ul>
-        <h2 className="text-3xl font-bold">Building and Configuring Samaya</h2>
+        <h2 className="text-3xl font-bold pt-6">
+          Building and Configuring Samaya
+        </h2>
 
         <Image
           src={"/casestudy_1.png"}
@@ -630,6 +635,7 @@ function Page() {
           transforming recruitment for the better.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

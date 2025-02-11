@@ -16,7 +16,7 @@ function Header() {
     { name: "Home", layerName: "home", ref: useRef(null) },
     { name: "Features", layerName: "features", ref: useRef(null) },
     { name: "How it works", layerName: "howItWorks", ref: useRef(null) },
-    { name: "Case Studies", layerName: "caseStudies", ref: useRef(null) },
+    { name: "Insights", layerName: "caseStudies", ref: useRef(null) },
     { name: "Contact us", layerName: "contactUs", ref: useRef(null) },
   ];
   const isInView = useInView(menuItems[0].ref, { once: false });
