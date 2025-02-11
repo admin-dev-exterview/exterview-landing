@@ -18,7 +18,7 @@ function Page() {
       </h1>
       <div className="sm:px-52 px-0 py-10 w-full">
         <Image
-          src={"/Samaya.png"}
+          src={"/samaya.png"}
           width={1440}
           height={600}
           alt={"bento image for key features"}
