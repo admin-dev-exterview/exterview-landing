@@ -317,7 +317,7 @@ function Page() {
           with the irreplaceable value of human expertise, creating a
           recruitment process that is both effective and human-centric.
         </p>
-        <h2 className="text-3xl font-bold">
+        {/* <h2 className="text-3xl font-bold">
           The Technology Powering Smaya: A Glimpse Under the Hood
         </h2>
         <p className="text-lg">
@@ -411,7 +411,7 @@ function Page() {
               <li>DevOps and Deployment: Docker, Kubernetes</li>
             </ul>
           </li>
-        </ul>
+        </ul> */}
         <h2 className="text-3xl font-bold pt-6">
           Building and Configuring Smaya
         </h2>
