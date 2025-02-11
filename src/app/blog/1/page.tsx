@@ -1,5 +1,6 @@
 import { blogContent } from "@/config/blog_content";
 import { categorytype } from "@/types/category";
+
 function Page() {
   const data = blogContent[0];
 
