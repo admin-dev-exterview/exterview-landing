@@ -7,7 +7,7 @@ import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import Faq from "@/components/Faq";
 import RequestADemo from "@/components/RequestADemo";
 import Footer from "@/components/Footer";
-import CaseStudies from "@/components/CaseStudies";
+// import CaseStudies from "@/components/CaseStudies";
 import Why from "@/components/Why";
 import SavingCalculator from "@/components/SavingCalculator";
 import KpiBento from "@/components/KpiBento";
@@ -17,6 +17,7 @@ import KeyFeaturesBento from "@/components/KeyFeaturesBento";
 import BusinessModule from "@/components/BusinessModule";
 import Hero from "@/components/Hero";
 import Smaya from "@/components/Smaya";
+import CaseStudy from "@/components/CaseStudy";
 
 interface MenuItem {
   name: string;
@@ -298,7 +299,8 @@ export default function Home() {
 
       {/* case studies */}
       <section ref={menuItems[3].ref}>
-        <CaseStudies />
+        {/* <CaseStudies /> */}
+        <CaseStudy />
       </section>
 
       {/* Faq's */}

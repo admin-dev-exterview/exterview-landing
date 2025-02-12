@@ -119,20 +119,22 @@ function Page() {
             <p className="font-bold">1. Job Role Creation:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated JD Generation: Smaya can automatically generate
-                comprehensive and accurate job descriptions based on your input.
-                Simply provide key details like the job title, required skills,
-                and responsibilities, and Smaya will craft a compelling JD that
-                attracts top talent.
+                <span className="font-bold">Automated JD Generation:</span>
+                Smaya can automatically generate comprehensive and accurate job
+                descriptions based on your input. Simply provide key details
+                like the job title, required skills, and responsibilities, and
+                Smaya will craft a compelling JD that attracts top talent.
               </li>
               <li>
-                JD Enhancement: Smaya can analyze existing job descriptions and
-                suggest improvements to make them more inclusive, engaging, and
+                <span className="font-bold">JD Enhancement:</span>
+                Smaya can analyze existing job descriptions and suggest
+                improvements to make them more inclusive, engaging, and
                 effective
               </li>
               <li>
-                JD Optimization: Smaya can optimize job descriptions for search
-                engines and job boards, ensuring maximum visibility and reach.
+                <span className="font-bold">JD Optimization:</span>
+                Smaya can optimize job descriptions for search engines and job
+                boards, ensuring maximum visibility and reach.
               </li>
             </ul>
           </li>
@@ -140,21 +142,23 @@ function Page() {
             <p className="font-bold">2. Candidate Sourcing:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Multi-Channel Sourcing: Smaya casts a wide net to find the best
-                candidates, sourcing from various channels like job boards
-                (Indeed, LinkedIn, Monster), social media platforms (LinkedIn,
-                Twitter, GitHub), and internal databases
+                <span className="font-bold">Multi-Channel Sourcing:</span>
+                Smaya casts a wide net to find the best candidates, sourcing
+                from various channels like job boards (Indeed, LinkedIn,
+                Monster), social media platforms (LinkedIn, Twitter, GitHub),
+                and internal databases
               </li>
               <li>
-                AI-Powered Matching: Smaya uses advanced AI algorithms to match
-                candidates to open positions based on skills, experience, and
-                other relevant criteria. This ensures that recruiters are
-                presented with the most qualified candidates, saving them
-                valuable time and effort.
+                <span className="font-bold">AI-Powered Matching:</span>
+                Smaya uses advanced AI algorithms to match candidates to open
+                positions based on skills, experience, and other relevant
+                criteria. This ensures that recruiters are presented with the
+                most qualified candidates, saving them valuable time and effort.
               </li>
               <li>
-                Targeted Outreach: Smaya can automate personalized outreach to
-                potential candidates, increasing engagement and response rates.
+                <span className="font-bold">Targeted Outreach:</span>
+                Smaya can automate personalized outreach to potential
+                candidates, increasing engagement and response rates.
               </li>
             </ul>
           </li>
@@ -162,22 +166,26 @@ function Page() {
             <p className="font-bold">3. Candidate Screening:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Resume Screening: Smaya efficiently screens resumes
-                and applications, filtering out unqualified candidates and
-                identifying those who best match the job requirements. This
-                eliminates the need for recruiters to manually review hundreds
-                or even thousands of resumes.
+                <span className="font-bold">Automated Resume Screening:</span>
+                Smaya efficiently screens resumes and applications, filtering
+                out unqualified candidates and identifying those who best match
+                the job requirements. This eliminates the need for recruiters to
+                manually review hundreds or even thousands of resumes.
               </li>
               <li>
-                Skills Extraction and Analysis: Smaya extracts key skills and
-                experience from resumes and profiles, using NLP and ML to
-                analyze and rank candidates based on their suitability.
+                <span className="font-bold">
+                  Skills Extraction and Analysis:
+                </span>
+                Smaya extracts key skills and experience from resumes and
+                profiles, using NLP and ML to analyze and rank candidates based
+                on their suitability.
               </li>
               <li>
-                Bias Mitigation: Smaya is designed to minimize bias in the
-                screening process by focusing on objective criteria and avoiding
-                reliance on potentially biased information like names, photos,
-                or social media profiles.
+                <span className="font-bold">Bias Mitigation:</span>
+                Smaya is designed to minimize bias in the screening process by
+                focusing on objective criteria and avoiding reliance on
+                potentially biased information like names, photos, or social
+                media profiles.
               </li>
             </ul>
           </li>
@@ -185,20 +193,23 @@ function Page() {
             <p className="font-bold">4. Interview Scheduling:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Scheduling: Smaya automates the interview scheduling
-                process, considering the availability of both candidates and
-                interviewers. This eliminates the back-and-forth emails and
-                phone calls that often plague traditional scheduling.
+                <span className="font-bold">Automated Scheduling:</span>
+                Smaya automates the interview scheduling process, considering
+                the availability of both candidates and interviewers. This
+                eliminates the back-and-forth emails and phone calls that often
+                plague traditional scheduling.
               </li>
               <li>
-                Calendar Integration: Smaya integrates with popular calendar
-                applications (Google Calendar, Outlook Calendar) to seamlessly
-                schedule interviews and send reminders.
+                <span className="font-bold">Calendar Integration:</span>
+                Smaya integrates with popular calendar applications (Google
+                Calendar, Outlook Calendar) to seamlessly schedule interviews
+                and send reminders.
               </li>
               <li>
-                Self-Scheduling: Smaya allows candidates to self-schedule
-                interviews based on their availability, providing a convenient
-                and flexible experience.
+                <span className="font-bold">Self-Scheduling:</span>
+                Smaya allows candidates to self-schedule interviews based on
+                their availability, providing a convenient and flexible
+                experience.
               </li>
             </ul>
           </li>
@@ -206,20 +217,22 @@ function Page() {
             <p className="font-bold">5. AI-Powered Screening Interviews:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Interviews: Smaya conducts initial screening
-                interviews, asking pre-defined or dynamically generated
-                questions based on the job requirements and candidate profile.
+                <span className="font-bold">Automated Interviews:</span>
+                Smaya conducts initial screening interviews, asking pre-defined
+                or dynamically generated questions based on the job requirements
+                and candidate profile.
               </li>
               <li>
-                Natural Language Interaction: Smaya uses NLP to understand and
-                respond to candidate answers in a natural and conversational
-                manner, creating a more engaging and human-like experience.
+                <span className="font-bold">Natural Language Interaction:</span>
+                Smaya uses NLP to understand and respond to candidate answers in
+                a natural and conversational manner, creating a more engaging
+                and human-like experience.
               </li>
               <li>
-                Candidate Evaluation: Smaya analyzes candidate responses,
-                evaluating their skills, experience, and communication
-                abilities. This provides recruiters with valuable insights to
-                make informed decisions.
+                <span className="font-bold">Candidate Evaluation:</span>
+                Smaya analyzes candidate responses, evaluating their skills,
+                experience, and communication abilities. This provides
+                recruiters with valuable insights to make informed decisions.
               </li>
             </ul>
           </li>
@@ -227,16 +240,17 @@ function Page() {
             <p className="font-bold">6. Background Verification:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Verification: Smaya automates the background
-                verification process, integrating with third-party providers to
-                verify information like education, employment history, and
-                criminal records using 3rd Party platforms like Spring Verify
-                from India and Checkr from the US.
+                <span className="font-bold">Automated Verification:</span>
+                Smaya automates the background verification process, integrating
+                with third-party providers to verify information like education,
+                employment history, and criminal records using 3rd Party
+                platforms like Spring Verify from India and Checkr from the US.
               </li>
               <li>
-                Compliance and Efficiency: Smaya ensures compliance with
-                relevant regulations and streamlines the verification process,
-                reducing turnaround time and manual effort.
+                <span className="font-bold">Compliance and Efficiency:</span>
+                Smaya ensures compliance with relevant regulations and
+                streamlines the verification process, reducing turnaround time
+                and manual effort.
               </li>
             </ul>
             :
@@ -245,18 +259,19 @@ function Page() {
             <p className="font-bold">7. Offer Letter Management:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Offer Letters: Smaya generates offer letters based on
-                pre-defined templates and customized details, ensuring accuracy
-                and consistency.
+                <span className="font-bold">Automated Offer Letters:</span>
+                Smaya generates offer letters based on pre-defined templates and
+                customized details, ensuring accuracy and consistency.
               </li>
               <li>
-                E-signature Integration: Smaya integrates with e-signature
-                platforms like DocuSign to facilitate a seamless and secure
-                offer acceptance process.
+                <span className="font-bold">E-signature Integration:</span>
+                Smaya integrates with e-signature platforms like DocuSign to
+                facilitate a seamless and secure offer acceptance process.
               </li>
               <li>
-                Offer Tracking: Smaya tracks offer letter status, providing
-                recruiters with real-time updates and notifications.
+                <span className="font-bold">Offer Tracking:</span>
+                Smaya tracks offer letter status, providing recruiters with
+                real-time updates and notifications.
               </li>
             </ul>
           </li>
@@ -264,18 +279,21 @@ function Page() {
             <p className="font-bold">8. Onboarding:</p>
             <ul className="list-disc pl-6 mb-4 space-y-4">
               <li>
-                Automated Onboarding Tasks: Smaya automates various onboarding
-                tasks, such as creating accounts, sending welcome emails, and
-                assigning training materials.
+                <span className="font-bold">Automated Onboarding Tasks:</span>
+                Smaya automates various onboarding tasks, such as creating
+                accounts, sending welcome emails, and assigning training
+                materials.
               </li>
               <li>
-                Personalized Onboarding: Smaya provides a personalized
-                onboarding experience for new hires, tailoring information and
-                resources based on their roles and needs.
+                <span className="font-bold">Personalized Onboarding:</span>
+                Smaya provides a personalized onboarding experience for new
+                hires, tailoring information and resources based on their roles
+                and needs.
               </li>
               <li>
-                Onboarding Progress Tracking: Smaya tracks onboarding progress
-                and provides updates to both new hires and HR teams.
+                <span className="font-bold">Onboarding Progress Tracking:</span>
+                Smaya tracks onboarding progress and provides updates to both
+                new hires and HR teams.
               </li>
             </ul>
           </li>
@@ -417,7 +435,7 @@ function Page() {
         </h2>
 
         <Image
-          src={"/casestudy_1.png"}
+          src={"/flow-comp.png"}
           width={1440}
           height={600}
           alt={"bento image for key features"}
@@ -431,87 +449,101 @@ function Page() {
         </p>
         <ul className="list-decimal pl-6 mb-4 space-y-4">
           <li>
-            Create an Agent: Define the core purpose and functionalities of your
-            Smaya agent, such as candidate screening, interview scheduling, or
-            onboarding assistance.
+            <span className="font-bold">Create an Agent:</span> Define the core
+            purpose and functionalities of your Smaya agent, such as candidate
+            screening, interview scheduling, or onboarding assistance.
           </li>
           <li>
-            Add Skills/AI Tools: Equip your agent with the necessary skills and
-            AI tools, such as NLP models, dialogue management modules, and
-            external integrations, to perform its tasks effectively.
+            <span className="font-bold">Add Skills/AI Tools:</span>
+            Equip your agent with the necessary skills and AI tools, such as NLP
+            models, dialogue management modules, and external integrations, to
+            perform its tasks effectively.
           </li>
           <li>
-            Set Triggers: Define the events or conditions that will trigger
-            Smaya&apos;s actions, such as receiving a new application,
-            scheduling an interview, or completing a background check.
+            <span className="font-bold">Set Triggers:</span>
+            Define the events or conditions that will trigger Smaya&apos;s
+            actions, such as receiving a new application, scheduling an
+            interview, or completing a background check.
           </li>
           <li>
-            Core Instructions: Provide clear and concise instructions to guide
-            Smaya&apos;s behavior and decision-making, ensuring it aligns with
-            your recruitment policies and processes.
+            <span className="font-bold">Core Instructions:</span>
+            Provide clear and concise instructions to guide Smaya&apos;s
+            behavior and decision-making, ensuring it aligns with your
+            recruitment policies and processes.
           </li>
           <li>
-            Flow Builder: Utilize a visual flow builder to design and
-            orchestrate complex workflows, defining the sequence of actions,
-            conditions, and responses for different scenarios.
+            <span className="font-bold">Flow Builder:</span>
+            Utilize a visual flow builder to design and orchestrate complex
+            workflows, defining the sequence of actions, conditions, and
+            responses for different scenarios.
           </li>
           <li>
-            Give Agent Tools: Grant your agent access to the necessary tools and
-            resources, such as databases, APIs, and knowledge bases, to perform
-            its tasks efficiently.
+            <span className="font-bold">Give Agent Tools:</span>
+            Grant your agent access to the necessary tools and resources, such
+            as databases, APIs, and knowledge bases, to perform its tasks
+            efficiently.
           </li>
           <li>
-            Share Your Agent: Deploy your Smaya agent to various channels, such
-            as your website, messaging platforms, or internal HR systems, to
-            interact with candidates and recruiters.
+            <span className="font-bold">Share Your Agent:</span>
+            Deploy your Smaya agent to various channels, such as your website,
+            messaging platforms, or internal HR systems, to interact with
+            candidates and recruiters.
           </li>
           <li>
-            Labeling: Implement a labeling system to categorize and organize
-            data, enabling Smaya to learn and improve its performance over time
+            <span className="font-bold">Labeling:</span>
+            Implement a labeling system to categorize and organize data,
+            enabling Smaya to learn and improve its performance over time
           </li>
           <li>
-            Scheduled Messages: Configure scheduled messages to automate
-            communication with candidates, such as interview reminders,
-            onboarding instructions, and status updates.
+            <span className="font-bold">Scheduled Messages:</span>
+            Configure scheduled messages to automate communication with
+            candidates, such as interview reminders, onboarding instructions,
+            and status updates.
           </li>
           <li>
-            Escalate to Humans: Define escalation paths to ensure that human
-            recruiters are involved in critical decision points, such as
-            evaluating complex candidate profiles or providing personalized
-            feedback.
+            <span className="font-bold">Escalate to Humans:</span>
+            Define escalation paths to ensure that human recruiters are involved
+            in critical decision points, such as evaluating complex candidate
+            profiles or providing personalized feedback.
           </li>
           <li>
-            Sub-Agents: Create specialized sub-agents to handle specific tasks
-            or workflows, such as a screening agent, an interview scheduling
-            agent, or an onboarding agent.
+            <span className="font-bold">Sub-Agents:</span>
+            Create specialized sub-agents to handle specific tasks or workflows,
+            such as a screening agent, an interview scheduling agent, or an
+            onboarding agent.
           </li>
           <li>
-            Configure Templates: Customize templates for various communication
-            tasks, such as job descriptions, offer letters, and onboarding
-            emails, ensuring consistency and efficiency.
+            <span className="font-bold">Configure Templates:</span>
+            Customize templates for various communication tasks, such as job
+            descriptions, offer letters, and onboarding emails, ensuring
+            consistency and efficiency.
           </li>
           <li>
-            Bulk Scheduling: Enable bulk scheduling of interviews and other
-            tasks, optimizing recruiter time and streamlining the process.
+            <span className="font-bold">Bulk Scheduling:</span>
+            Enable bulk scheduling of interviews and other tasks, optimizing
+            recruiter time and streamlining the process.
           </li>
           <li>
-            Agent Message Templates: Design and manage message templates for
-            different scenarios and interactions, ensuring clear and consistent
-            communication with candidates.
+            <span className="font-bold">Agent Message Templates:</span>
+            Design and manage message templates for different scenarios and
+            interactions, ensuring clear and consistent communication with
+            candidates.
           </li>
           <li>
-            Cadence Contract: Define the frequency and timing of communication
-            with candidates, providing a structured and predictable experience.
+            <span className="font-bold">Cadence Contract:</span>
+            Define the frequency and timing of communication with candidates,
+            providing a structured and predictable experience.
           </li>
           <li>
-            Task Template Settings: Configure task templates to automate
-            repetitive tasks, such as sending reminders, updating records, and
-            generating reports.
+            <span className="font-bold">Task Template Settings:</span>
+            Configure task templates to automate repetitive tasks, such as
+            sending reminders, updating records, and generating reports.
           </li>
           <li>
-            Override Mode: Provide an override mode to allow human recruiters to
-            intervene and adjust Smaya&apos;s actions if necessary, maintaining
-            flexibility and control.
+            <span className="font-bold">Override Mode:</span>
+            Provide an override mode to allow human recruiters to intervene and
+            adjust Smaya&apos;s actions if necessary, maintaining flexibility
+            and control.
           </li>
         </ul>
         <p>
@@ -532,48 +564,52 @@ function Page() {
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-3">
           <li>
-            Advancements in AI: The rapid advancements in AI technology,
-            particularly in NLP and ML, have made it possible to create AI
-            agents like Smaya that can understand and respond to human language
-            with increasing accuracy and sophistication. This enables Smaya to
-            engage in natural and meaningful interactions with candidates,
-            providing a more human-like experience.
+            <span className="font-bold">Advancements in AI:</span>
+            The rapid advancements in AI technology, particularly in NLP and ML,
+            have made it possible to create AI agents like Smaya that can
+            understand and respond to human language with increasing accuracy
+            and sophistication. This enables Smaya to engage in natural and
+            meaningful interactions with candidates, providing a more human-like
+            experience.
           </li>
           <li>
-            Increased Data Availability: The abundance of data available today,
-            both from internal HR systems and external sources, provides Smaya
-            with the fuel it needs to learn and improve its performance. By
-            analyzing vast amounts of data, Smaya can identify patterns, predict
-            outcomes, and make more informed decisions.
+            <span className="font-bold">Increased Data Availability:</span>
+            The abundance of data available today, both from internal HR systems
+            and external sources, provides Smaya with the fuel it needs to learn
+            and improve its performance. By analyzing vast amounts of data,
+            Smaya can identify patterns, predict outcomes, and make more
+            informed decisions.
           </li>
           <li>
-            Changing Workforce Dynamics: The rise of remote work, the gig
-            economy, and the increasing demand for specialized skills have made
-            the recruitment process more complex and challenging. Smaya provides
-            the tools and automation needed to navigate this evolving landscape,
-            enabling companies to find and hire the best talent regardless of
-            location or employment type.
+            <span className="font-bold">Changing Workforce Dynamics:</span>
+            The rise of remote work, the gig economy, and the increasing demand
+            for specialized skills have made the recruitment process more
+            complex and challenging. Smaya provides the tools and automation
+            needed to navigate this evolving landscape, enabling companies to
+            find and hire the best talent regardless of location or employment
+            type.
           </li>
           <li>
-            Focus on Diversity and Inclusion: Smaya&apos;s AI-powered screening
-            and evaluation can help reduce unconscious bias in the hiring
-            process, promoting diversity and inclusion in the workplace. By
-            focusing on objective criteria and skills, Smaya ensures that all
-            candidates are evaluated fairly, regardless of their background.
+            <span className="font-bold">Focus on Diversity and Inclusion:</span>
+            Smaya&apos;s AI-powered screening and evaluation can help reduce
+            unconscious bias in the hiring process, promoting diversity and
+            inclusion in the workplace. By focusing on objective criteria and
+            skills, Smaya ensures that all candidates are evaluated fairly,
+            regardless of their background.
           </li>
           <li>
-            Enhanced Candidate Experience: Smaya provides a seamless and
-            positive experience for candidates, from initial application to
-            onboarding. By automating tedious tasks, streamlining communication,
-            and providing personalized interactions, Smaya creates a more
-            engaging and efficient candidate journey
+            <span className="font-bold">Enhanced Candidate Experience:</span>
+            Smaya provides a seamless and positive experience for candidates,
+            from initial application to onboarding. By automating tedious tasks,
+            streamlining communication, and providing personalized interactions,
+            Smaya creates a more engaging and efficient candidate journey
           </li>
           <li>
-            Increased Recruiter Productivity: Smaya empowers recruiters by
-            automating repetitive tasks and providing data-driven insights. This
-            frees up recruiters to focus on building relationships with
-            candidates, conducting in-depth interviews, and making strategic
-            hiring decisions.
+            <span className="font-bold">Increased Recruiter Productivity:</span>
+            Smaya empowers recruiters by automating repetitive tasks and
+            providing data-driven insights. This frees up recruiters to focus on
+            building relationships with candidates, conducting in-depth
+            interviews, and making strategic hiring decisions.
           </li>
         </ul>
         <p>
@@ -591,39 +627,42 @@ function Page() {
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-3">
           <li>
-            Empower Recruiters: Free up recruiters from tedious and repetitive
-            tasks, allowing them to focus on building relationships with
-            candidates, providing personalized guidance, and making strategic
-            hiring decisions that align with the company&apos;s goals and
-            values.
+            <span className="font-bold">Empower Recruiters:</span>
+            Free up recruiters from tedious and repetitive tasks, allowing them
+            to focus on building relationships with candidates, providing
+            personalized guidance, and making strategic hiring decisions that
+            align with the company&apos;s goals and values.
           </li>
           <li>
-            Accelerate Hiring: Significantly reduce time-to-hire by automating
-            tasks, streamlining workflows, and providing data-driven insights.
-            This enables companies to fill open positions quickly and
-            efficiently, minimizing productivity loss and maximizing
-            opportunities.
+            <span className="font-bold">Accelerate Hiring:</span>
+            Significantly reduce time-to-hire by automating tasks, streamlining
+            workflows, and providing data-driven insights. This enables
+            companies to fill open positions quickly and efficiently, minimizing
+            productivity loss and maximizing opportunities.
           </li>
           <li>
-            Improve Candidate Experience: Provide a seamless, engaging, and
-            positive experience for candidates throughout the entire recruitment
-            journey. By automating communication, providing personalized
-            feedback, and offering a user-friendly interface, Smaya enhances the
-            candidate experience and strengthens the employer brand.
+            <span className="font-bold">Improve Candidate Experience:</span>
+            Provide a seamless, engaging, and positive experience for candidates
+            throughout the entire recruitment journey. By automating
+            communication, providing personalized feedback, and offering a
+            user-friendly interface, Smaya enhances the candidate experience and
+            strengthens the employer brand.
           </li>
           <li>
-            Promote Diversity and Inclusion: Minimize bias in the hiring process
-            by focusing on objective criteria and skills. Smaya&apos;s
-            AI-powered screening and evaluation help create a more level playing
-            field for all candidates, regardless of their background, promoting
-            a more diverse and inclusive workforce.
+            <span className="font-bold">Promote Diversity and Inclusion:</span>
+            Minimize bias in the hiring process by focusing on objective
+            criteria and skills. Smaya&apos;s AI-powered screening and
+            evaluation help create a more level playing field for all
+            candidates, regardless of their background, promoting a more diverse
+            and inclusive workforce.
           </li>
           <li>
-            Drive Data-Driven Decisions: Provide recruiters with valuable data
-            and insights to make informed decisions about their hiring process.
-            Smaya&apos;s analytics and reporting capabilities enable companies
-            to track key metrics, identify areas for improvement, and optimize
-            their recruitment strategies.
+            <span className="font-bold">Drive Data-Driven Decisions:</span>
+            Provide recruiters with valuable data and insights to make informed
+            decisions about their hiring process. Smaya&apos;s analytics and
+            reporting capabilities enable companies to track key metrics,
+            identify areas for improvement, and optimize their recruitment
+            strategies.
           </li>
         </ul>
         <p>
