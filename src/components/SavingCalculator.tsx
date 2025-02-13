@@ -108,13 +108,13 @@ function SavingCalculator() {
                 <br /> candidate screening
               </h2>
             </div>
-            <div className="text-2xl sm:text-4xl font-bold text-white w-full py-1  px-6 text-center">
+            <div className="text-4xl font-bold text-white w-full py-1  px-6 text-center">
               - {Math.abs(Math.floor(savedHours))} hours
             </div>
             <h2 className="text-xl font-medium sm:text-xl mb-4 px-6 ">
               Compared to current process over a year
             </h2>
-            <div className="text-3xl sm:text-7xl font-bold text-white w-full text-center px-5">
+            <div className="text-6xl sm:text-7xl font-bold text-white w-full text-center px-5">
               {percentSaved}%
             </div>
 

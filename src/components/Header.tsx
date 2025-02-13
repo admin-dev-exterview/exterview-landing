@@ -30,11 +30,11 @@ function Header() {
   return (
     <header
       ref={menuItems[0].ref}
-      className="sm:sticky top-0 z-20 flex justify-between items-center py-4 px-5 rounded-xl"
+      className="sm:sticky top-0 z-20 flex justify-center items-center py-4 px-5 rounded-xl"
     >
       <nav
         data-layername="menu"
-        className={`flex justify-between items-center w-full sm:bg-[#f3f8fe]  sm:px-5 sm:py-2 px-0 py-0 rounded-xl ${
+        className={`flex justify-between items-center sm:w-[170vh] w-full sm:bg-[#f3f8fe]  sm:px-5 sm:py-2 px-0 py-0 rounded-xl ${
           isInView ? "border-none" : "border"
         }`}
       >
@@ -44,7 +44,8 @@ function Header() {
           alt="Exterview logo"
           width={130}
           height={40}
-          className="object-contain shrink-0"
+          className="object-contain shrink-0 cursor-pointer"
+          onClick={() => router.push("/")}
         />
 
         {/* Hamburger Icon */}

@@ -69,7 +69,7 @@ export default function Home() {
       <header className="sm:sticky w-full  top-0 z-20 flex justify-center items-center py-4 px-5 rounded-xl">
         <nav
           data-layername="menu"
-          className={`flex justify-between items-center w-[170vh] sm:bg-[#f3f8fe]  sm:px-5 md:px-2 sm:py-2 px-0 py-0 rounded-xl ${
+          className={`flex justify-between items-center w-[170vh] sm:bg-[#f3f8fe]  sm:px-5  sm:py-2 px-0 py-0 rounded-xl ${
             isInView ? "border-none" : "border"
           }`}
         >
@@ -79,7 +79,7 @@ export default function Home() {
             alt="Exterview logo"
             width={130}
             height={40}
-            className="object-contain shrink-0"
+            className="object-contain shrink-0 cursor-pointer"
           />
 
           {/* Hamburger Icon */}

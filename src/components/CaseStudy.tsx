@@ -11,28 +11,28 @@ export default function CaseStudy() {
             Insights
           </p>
           <h2 className="sm:text-5xl text-3xl my-7 font-bold text-center">
-            Get Updated with Industry Insights
+            How we are making this happen?
           </h2>
         </div>
-        <div className="flex sm:flex-row flex-col gap-4 items-center sm:px-40 px-0">
-          <div className="w-1/2">
+        <div className="flex sm:flex-row flex-col sm:gap-16 gap-4 items-center sm:px-40 px-0">
+          <div className="sm:w-1/2 w-full">
             <Image
               src="/casestudy_1.png"
               width={350}
               height={290}
               alt="study"
-              className="w-full rounded-lg"
+              className="w-full rounded-lg aspect-[3/2] object-cover"
             />
           </div>
-          <div className="w-1/2 space-y-6">
+          <div className="sm:w-1/2 w-full sm:space-y-8 space-y-4">
             <p className="text-[#0e6cf6] text-[12px] font-semibold">
               INNOVATION TECHNOLOGY
             </p>
-            <div className="space-y-2">
+            <div className="space-y-6  ">
               <h2 className="text-2xl font-bold">
-                How we are making this happen?
+                Can AI Replace Recruiters? Samaya is Changing the Game in 2025
               </h2>
-              <p className="text-[14x]">
+              <p className="text-[14x] pr-10">
                 The year is 2025. The world is abuzz with technological
                 advancements, and artificial intelligence (AI) is at the
                 forefront of this revolution. The future of hiring is here, and
