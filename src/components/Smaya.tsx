@@ -9,7 +9,7 @@ function Smaya() {
             SMAYA
           </p>
           <h2 className="sm:text-5xl text-3xl my-7 font-bold text-center">
-            Meet
+            Meet{" "}
             <span className="text-[#0e6cf6]">Smaya</span>. Your AI Agent For{" "}
             <br />
             End TO End Recruitment Activities
